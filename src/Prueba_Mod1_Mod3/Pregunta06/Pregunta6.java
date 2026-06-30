@@ -1,4 +1,4 @@
-package Prueba_Mod1_Mod3;
+package Prueba_Mod1_Mod3.Pregunta06;
 
 public class Pregunta6 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Prueba_Mod1_Mod3;
+package Prueba_Mod1_Mod3.Pregunta07;
 
 import java.util.Stack;
 
