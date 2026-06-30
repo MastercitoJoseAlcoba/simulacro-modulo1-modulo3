@@ -1,0 +1,71 @@
+Pregunta 13
+
+Ejercicio: Creación de la clase Producto
+
+Crea una clase llamada Producto que represente un producto dentro de un sistema de inventario.
+La clase debe tener los siguientes 3 atributos privados:
+
+private String nombre;
+private double precio;
+private int stock;
+
+Constructores:
+
+Debes implementar sobrecarga de constructores, creando los siguientes 3 constructores:
+1. Un constructor sin parámetros que inicialice: A. nombre con "Producto sin nombre",
+                                                 B. categoria con "Categoría sin definir"
+                                                 C. stock con 0
+
+2. Un constructor que reciba: A. nombre.
+                              B. categoria.
+                              En este caso, el atributo stock debe inicializarse con 0.
+
+3. Un constructor que reciba: A. nombre
+                              B. categoria
+                              C. stock
+
+Métodos get y set:
+
+La clase debe tener métodos get y set para atributo: A. getNombre() y setNombre(String nombre)
+                                                     B. getCategoria() y setCategoria(String categoria)
+                                                     C. getStock() y setStock(int stock)
+
+Los métodos set deben controlar que los datos ingresados sean válidos:
+
+1. El método setNombre(String nombre) solo debe modificar el atributo si el nombre no está vacío.
+2. El método setCategoria(String categoria) solo debe modificar el atributo si la categoria no esta vacía.
+3.El método setStock(int stock) solo debe modificar el atributo si el stock es mayor o igual a 0.
+
+Metodo mostrar:
+
+También debes crear un método llamado mostrar, que sea un procedimiento, es decir, que no retorne ningún valor.
+El método debe tener la siguiente firma:
+
+public void mostrar()
+
+Este método debe mostrar los datos del producto con el siguiente formato:
+
+Producto: nombre
+Categoria: categoria
+Stock disponible: stock
+
+Por ejemplo, si el producto tiene nombre "mouse, categoria "informática" y stock 15, el método mostrar() debería imprimir:
+
+Producto: Mouse
+Categoria: Informatica
+Stock disponible: 15
+
+Requisitos importantes:
+
+1. Los atributos deben ser private.
+2. La clase debe llamarse exactamente Producto.
+3. Debes implementar 3 constructores sobrecargados.
+4. Debes implementar los métodos get y set de los 3 atributos.
+5. Los métodos set deben validar los datos antes de modificar los atributos.
+6. No debes crear el método main.
+7. No debes crear el método toString.
+8. Debes crear el método mostrar() como procedimiento.
+
+Consejo: Observa bien el caso de prueba. Allí tendras información sobre el nombre exacto de la clase, los tipos de datos,
+los nombres de los métodos y el formato esperado de salida del método mostrar().
+
