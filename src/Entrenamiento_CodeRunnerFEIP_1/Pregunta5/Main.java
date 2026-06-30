@@ -11,7 +11,8 @@ public class Main {
      * public boolean validarVocal(String palabra)
      *
      *
-     * Comentarios: Comienza diciendo completar la función validarLetras y despues vemos que la firma cambia a
+     * Comentarios: Comienza diciendo completar la función validarLetras y después vemos que la firma cambia a
+     * validarVocal.
      */
 
     public boolean validarVocal(String palabra) {
