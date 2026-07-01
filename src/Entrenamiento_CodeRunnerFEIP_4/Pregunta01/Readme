@@ -1,0 +1,12 @@
+Pregunta 1
+
+Descripción del problema: Se solicita implementar un procedimiento que reciba como parámetro un texto (String) compuesto por varias palabras separadas por espacios. El objetivo es analizar el texto y mostrar cuántas palabras existen por cada longitud detectada.
+
+Requisitos:
+
+• El procedimiento debe llamarse analizarLongitudes(String texto).
+• Debe mostrar por pantalla la longitud seguida de " -> " y la cantidad de palabras (ej: 3 -> 2).
+• Las longitudes deben mostrarse en orden ascendente.
+• Restricción estricta: No se permite el uso de sentencias import. Si utiliza colecciones (como TreeMap), debe referenciarlas por su nombre completamente calificado: java.util.Map y java.util.TreeMap.
+• No debe incluir el método main.
+• Si el texto es nulo o vacío, el método no debe realizar ninguna acción.

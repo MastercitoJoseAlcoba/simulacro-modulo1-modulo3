@@ -1,0 +1,17 @@
+Pregunta 8
+
+Escribir un programa que lea el sueldo de un trabajador y aplique un aumento del 15% solo si el sueldo es menor a 1000.00.
+
+Si el sueldo es menor a 1000, se debe mostrar el nuevo sueldo con el aumento aplicado.
+
+Si el sueldo es mayor o igual a 1000, el sueldo permanece igual.
+
+El programa debe imprimir solo el sueldo final, sin texto adicional.
+
+📥 Entrada:
+
+Un número decimal que representa el sueldo del trabajador.
+
+📤 Salida:
+
+Un número decimal que representa el sueldo final del trabajador.

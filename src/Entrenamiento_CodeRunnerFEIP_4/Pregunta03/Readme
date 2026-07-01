@@ -1,0 +1,40 @@
+Pregunta 3
+
+Descripción del problema:
+
+Implemente un método que reciba un array de números enteros (int[]) y genere un nuevo array donde cada elemento sea el resultado de transformar el valor original según una condición. Luego de realizar la transformación, el método debe retornar un String que represente el nuevo array, con sus valores separados por comas.
+
+Requisitos:
+
+El método debe llamarse procesarValores(int[] datos).
+
+Debe crear un nuevo array del mismo tamaño que el array recibido como parámetro.
+
+El método debe retornar un String con los valores del nuevo array separados por comas.
+
+El array original no debe ser modificado.
+
+No debe incluir el método main.
+
+Lógica de transformación:
+
+Si el valor original es mayor a 10, el valor correspondiente en el nuevo array debe ser la mitad del original (utilizando división entera).
+
+Si el valor original es menor o igual a 10, el valor correspondiente en el nuevo array debe ser el triple del original.
+
+Formato del retorno:
+
+Los valores deben estar separados por una coma (,).
+
+No debe haber una coma al final del String.
+
+Si el array está vacío, se debe retornar un String vacío.
+
+
+Ejemplos:
+
+Entrada: {4, 12, 8}
+Retorno: "12,6,24"
+
+Entrada: {20, 2}
+Retorno: "10,6"

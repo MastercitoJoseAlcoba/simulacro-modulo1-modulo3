@@ -1,0 +1,44 @@
+Pregunta 6
+
+Una institución educativa desea modelar los cursos que ofrece dentro de su sistema de gestión académica.
+Para ello, se debe implementar una clase llamada Curso.
+
+La clase Curso debe tener los siguientes atributos privados:
+codigoCurso de tipo String
+nombreCurso de tipo String
+costo de tipo double
+La clase debe implementar tres constructores sobrecargados:
+1.    Constructor sin parámetros, que inicialice:
+codigoCurso con el valor "SIN-CODIGO"
+nombreCurso con el valor "sin descripción"
+costo con el valor 0.0
+2.    Constructor que reciba el código y el nombre del curso.
+El costo debe inicializarse en 0.0.
+3.    Constructor que reciba el código, el nombre y el costo del curso.
+
+Se deben implementar métodos públicos para acceder y modificar los atributos:
+Métodos getter
+getCodigoCurso() → retorna String
+getNombreCurso() → retorna String
+getCosto() → retorna double
+Métodos setter:
+setCodigoCurso(String codigoCurso)
+setNombreCurso(String nombreCurso)
+setCosto(double costo)
+La clase debe implementar un método llamado aplicarBeca, que permita aplicar una bonificación al costo del curso.
+El método debe recibir un double que represente el porcentaje de bonificación.
+La bonificación debe calcularse sobre el costo actual.
+El método debe modificar el atributo costo.
+Ejemplo:
+Si el costo es 1000 y la bonificación es del 15, el nuevo costo será 850.
+
+Representación del curso
+Debe sobrescribirse el método toString() para que devuelva el siguiente texto:
+El curso <codigoCurso> corresponde a <nombreCurso> y su costo es <costo>.
+
+Restricciones
+No debe implementarse el método main.
+La clase debe llamarse exactamente Curso.
+El método aplicarBeca debe realizar el cálculo y actualizar el costo.
+No se deben usar librerías externas.
+No se deben imprimir mensajes por consola dentro de los métodos.

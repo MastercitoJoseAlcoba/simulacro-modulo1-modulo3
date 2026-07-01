@@ -1,0 +1,17 @@
+Pregunta 7
+
+En un sistema de gestión de un auto eléctrico, se registra la carga de cada batería en un array de enteros.
+Se necesita un método que haga lo siguiente:
+
+Invertir el orden de las cargas de las baterías (la última batería registrada pasa a la primera posición, etc.).
+
+Recorrer el array invertido y multiplicar por 4 las baterías con carga par. Las cargas impares deben mantenerse sin cambios.
+
+Devolver un nuevo array con los valores procesados, sin modificar el array original.
+
+Condiciones:
+
+No se debe incluir el método main.
+Preste atención al nombre exacto del método y los tipos de datos.
+La firma del método debe ser exactamente:
+public int[] procesarBaterias(int[] cargas)
