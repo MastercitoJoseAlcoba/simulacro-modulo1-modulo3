@@ -1,0 +1,17 @@
+Pregunta 4
+
+Enunciado
+
+Implementa un método llamado invertirArray que reciba como parámetro un array de números enteros y devuelva un nuevo array con los elementos en orden inverso.
+
+Además, cada número que sea divisible por 4 deberá ser reemplazado por el doble de su valor en el array resultante.
+
+El método debe cumplir con las siguientes condiciones:
+
+- Debe devolver un nuevo array.
+- No debe modificar el array original.
+- Debe invertir el orden de los elementos.
+- Si un número es divisible por 4, en el nuevo array debe aparecer su valor duplicado.
+- No se debe implementar el método main.
+
+La firma del método es invertirArray int [] (int [] numeros)

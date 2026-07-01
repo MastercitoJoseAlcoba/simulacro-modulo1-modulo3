@@ -1,0 +1,15 @@
+Pregunta 3
+
+Suma de números pares en un array
+
+Enunciado
+
+Implementa un método llamado sumarPares que reciba como parámetro un array de números enteros y devuelva la suma de todos los valores pares contenidos en dicho array.
+
+Un número se considera par cuando es divisible entre 2, es decir, cuando el resto de dividirlo entre 2 es igual a 0.
+
+El método debe recorrer el array completo, identificar cuáles elementos son pares y acumular su suma.
+
+No se debe implementar el método main.
+
+La firma del método es:      public int sumarPares(int[] numeros)

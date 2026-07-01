@@ -1,0 +1,24 @@
+Pregunta 6
+
+Título del ejercicio
+
+Obtener números pares duplicados de una lista
+
+Enunciado
+
+Implementa un método llamado obtenerParesDuplicados que reciba como parámetro una lista de números enteros y devuelva una nueva lista que contenga únicamente los números pares de la lista original, pero duplicando su valor.
+
+El método debe cumplir las siguientes condiciones:
+
+- Debe recorrer todos los elementos de la lista recibida.
+- Solo debe agregar a la nueva lista los números pares.
+- Cada número par agregado debe estar multiplicado por 2.
+- Debe conservar el orden original de aparición.
+- No debe modificar la lista original.
+- No se debe implementar el método main.
+
+Las clases necesarias del paquete java.util ya están importadas.
+
+La firma del método es:
+
+public static List<Integer> obtenerParesDuplicados(List<Integer> numeros)

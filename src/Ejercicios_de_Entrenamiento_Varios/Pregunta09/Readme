@@ -1,0 +1,23 @@
+Pregunta 9
+
+Ordenar un array usando Bubble Sort
+
+Enunciado
+
+Implementa un método llamado ordenarBurbuja que reciba como parámetro un array de números enteros y devuelva un nuevo array con los mismos valores ordenados de menor a mayor.
+
+Para resolver el ejercicio se debe aplicar el algoritmo de ordenamiento Bubble Sort, también conocido como ordenamiento burbuja.
+
+El algoritmo Bubble Sort compara elementos consecutivos del array y, si están en el orden incorrecto, los intercambia. Este proceso se repite varias veces hasta que todos los elementos quedan ordenados.
+
+El método debe cumplir con las siguientes condiciones:
+
+- Debe recibir un array de números enteros.
+- Debe devolver un nuevo array ordenado de menor a mayor.
+- No debe modificar el array original recibido como parámetro.
+- Debe utilizar el algoritmo Bubble Sort.
+- No se debe implementar el método main.
+
+Firma del método requerida:
+
+public static int[] ordenarBurbuja(int[] numeros)
