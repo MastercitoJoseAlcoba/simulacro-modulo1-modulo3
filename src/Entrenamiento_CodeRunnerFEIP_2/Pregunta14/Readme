@@ -1,0 +1,28 @@
+Pregunta 14
+
+Un ISBN-10 (International Standard Book Number) es un identificador único de 10 caracteres utilizado en libros publicados
+antes del año 2007.
+
+Para que un número ISBN-10 sea considerado válido, debe cumplir con la siguiente condición matemática:
+
+(1 × d₁) + (2 × d₂) + (3 × d₃) + ... + (10 × d₁₀) ≡ 0 (módulo 11)
+
+Es decir, la suma ponderada de sus caracteres (cada uno multiplicado por su posición, de 1 a 10) debe ser divisible
+exactamente por 11.
+
+Reglas específicas:
+
+1. El ISBN debe tener exactamente 10 caracteres.
+2. Cada carácter debe ser un dígito entre '0' y '9', excepto el último carácter (posición 10), que puede ser también la
+letra 'X' (X en mayúsculas),  la cual representa el valor numérico 10.
+3. Para convertir cada carácter en número, se puede utilizar el método estático Character.getNumericValue(char).
+4. Se puede usar también el método : Character.isDigit(c) para validar si el elemento que recorremos es un dígito entre
+5. 0 y 9. Recuerden que Character es la clase Wrapper de la primitiva char.
+
+
+Se debe completar el siguiente método, que recibe como parámetro un String representando un ISBN-10, y retorna true si
+el número es válido o false en caso contrario.
+
+
+Firma del método:
+public boolean validarISBN(String isbn)

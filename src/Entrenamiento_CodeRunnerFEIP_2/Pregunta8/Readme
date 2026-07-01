@@ -1,0 +1,25 @@
+Pregunta 8
+
+Escribe una función en Java que reciba una cadena de texto y la normalice siguiendo estas reglas:
+
+1. Eliminar espacios extra al inicio y al final de la cadena.
+2. Convertir la cadena a minúsculas.
+3. Reemplazar todas las vocales con tilde (á, é, í, ó, ú) por sus equivalentes sin tilde (a, e, i, o, u).
+4. Eliminar caracteres especiales (, . ; : ! ? ¿ ¡).
+
+El programa debe imprimir la cadena normalizada.
+
+📥 Entrada
+Una cadena de texto.
+
+Ejemplo de entrada:
+
+¡Hola, cómo estás?
+
+Salida esperada:
+
+hola como estas
+
+## La firma de la función es de la siguiente forma:
+
+public String normalizar(String texto)
