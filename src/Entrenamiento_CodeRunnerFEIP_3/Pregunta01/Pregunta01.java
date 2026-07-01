@@ -1,6 +1,6 @@
 package Entrenamiento_CodeRunnerFEIP_3.Pregunta01;
 
-public class Pregunta1 {
+public class Pregunta01 {
     public static int diferenciaParesImpares(int[][] matriz) {
         /**
          *La lógica es:

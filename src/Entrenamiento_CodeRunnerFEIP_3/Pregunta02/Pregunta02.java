@@ -2,7 +2,7 @@ package Entrenamiento_CodeRunnerFEIP_3.Pregunta02;
 
 import java.util.Scanner;
 
-public class Main {
+public class Pregunta02 {
     public static void main(String[] args) {
         // Este ejercicio sí pide programa completo, porque hay entrada con Scanner y salida por pantalla.
         Scanner sc = new Scanner(System.in);

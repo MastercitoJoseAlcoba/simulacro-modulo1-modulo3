@@ -1,6 +1,6 @@
 package Entrenamiento_CodeRunnerFEIP_3.Pregunta03;
 
-public class Pregunta3 {
+public class Pregunta03 {
     public static int[][] crearTabla(int fila, int columna) {
         // Acá te piden solo el método, no main, no Scanner, no System.out.println.
         int[][] tabla = new int[fila][columna];
