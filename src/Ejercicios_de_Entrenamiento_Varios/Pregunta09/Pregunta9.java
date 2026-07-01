@@ -1,7 +1,7 @@
 package Ejercicios_de_Entrenamiento_Varios.Pregunta09;
 
 public class Pregunta9 {
-    public class Solucion {
+    public static class Solucion {
 
         public static int[] ordenarBurbuja(int[] numeros) {
             // Primera parte inicio.
