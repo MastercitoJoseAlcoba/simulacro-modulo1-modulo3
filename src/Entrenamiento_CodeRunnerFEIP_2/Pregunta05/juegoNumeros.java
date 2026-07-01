@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta5;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta05;
 
 public class juegoNumeros {
     public void juegoNumeros(int m) {

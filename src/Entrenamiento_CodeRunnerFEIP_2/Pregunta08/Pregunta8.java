@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta8;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta08;
 
 public class Pregunta8 {
     public static String normalizar(String texto) {

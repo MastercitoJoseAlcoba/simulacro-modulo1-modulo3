@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta3;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta03;
 
 public class duplicarInvertido {
     public static int[] duplicarInvertido(int[] arreglo) {

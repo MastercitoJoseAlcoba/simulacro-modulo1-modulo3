@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta2;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta02;
 
 public class fiboCuadrado {
     public static int[] fiboCuadrado(int n) {

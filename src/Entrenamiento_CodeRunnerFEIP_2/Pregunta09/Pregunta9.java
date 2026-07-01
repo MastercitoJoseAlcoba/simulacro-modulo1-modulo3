@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta9;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta09;
 
 public class Pregunta9 {
     public static boolean validarTarjeta(String tarjeta) {

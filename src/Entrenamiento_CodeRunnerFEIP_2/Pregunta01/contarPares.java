@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta1;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta01;
 
 public class contarPares {
     /**

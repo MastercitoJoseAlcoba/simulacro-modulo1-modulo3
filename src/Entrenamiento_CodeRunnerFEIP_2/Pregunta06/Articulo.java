@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta6;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta06;
 
 public class Articulo {
     private String descripcion;

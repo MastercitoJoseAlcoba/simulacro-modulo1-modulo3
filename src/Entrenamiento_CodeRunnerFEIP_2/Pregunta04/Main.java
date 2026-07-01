@@ -1,4 +1,4 @@
-package Entrenamiento_CodeRunnerFEIP_2.Pregunta4;
+package Entrenamiento_CodeRunnerFEIP_2.Pregunta04;
 
 public class Main {
     public static void main(String[] args) {
