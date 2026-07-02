@@ -1,0 +1,114 @@
+Pregunta 1
+
+En este ejercicio, deberás trabajar con clases abstractas y herencia en Java, modelando distintos tipos de personas dentro de una organización.
+
+El objetivo es definir una estructura base común y especializar el comportamiento en clases derivadas.
+
+Requisitos:
+
+Crear una clase abstracta llamada Persona.
+Atributos:
+nombre (String)
+edad (int)
+Método abstracto:
+presentarse(): debe ser implementado por las clases derivadas.
+
+Clases derivadas:
+
+Empleado:
+Debe extender la clase Persona.
+Puede incluir atributos adicionales (por ejemplo, empresa).
+Debe implementar el método presentarse() mostrando información acorde a un empleado.
+Gerente:
+Debe extender la clase Persona.
+Puede incluir atributos adicionales (por ejemplo, departamento).
+Debe implementar el método presentarse() mostrando información acorde a un gerente.
+
+Instrucciones:
+
+Implemente la clase abstracta Persona con sus atributos y método abstracto.
+Implemente un constructor en la clase base para inicializar los atributos.
+Las clases Empleado y Gerente deben heredar de Persona.
+Utilice super para inicializar los atributos heredados.
+Implemente el método presentarse() en cada clase derivada.
+Utilice la anotación @Override en los métodos redefinidos.
+
+Consideraciones:
+
+Una clase abstracta no puede ser instanciada directamente.
+Las clases derivadas deben implementar todos los métodos abstractos.
+El comportamiento del método presentarse() debe diferenciarse según el tipo de persona.
+
+Pregunta 2:
+
+En este ejercicio, deberás trabajar con clases abstractas en Java, aplicando conceptos de herencia y polimorfismo.
+
+El objetivo es modelar distintas figuras geométricas que comparten un comportamiento común, pero que implementan sus funcionalidades de manera específica.
+
+
+Requisitos:
+
+Crear una clase abstracta llamada FiguraGeometrica.
+Definir en esta clase los siguientes métodos abstractos:
+abstract void dibujar();
+abstract void calcularArea();
+
+Clases derivadas:
+
+Circulo:
+Debe extender la clase FiguraGeometrica.
+Debe tener un atributo radio (double).
+Debe implementar los métodos dibujar() y calcularArea().
+Rectangulo:
+Debe extender la clase FiguraGeometrica.
+Debe tener atributos base y altura (double).
+Debe implementar los métodos dibujar() y calcularArea().
+
+Instrucciones:
+
+Implemente la clase abstracta con sus métodos abstractos.
+Las clases Circulo y Rectangulo deben heredar de FiguraGeometrica.
+Implemente los métodos abstractos en cada clase derivada.
+Utilice la anotación @Override en los métodos redefinidos.
+En el método calcularArea(), utilice la fórmula correspondiente para cada figura.
+
+Consideraciones:
+
+Una clase abstracta no puede ser instanciada directamente.
+Las clases que heredan de una clase abstracta deben implementar todos sus métodos abstractos.
+
+Pregunta 3:
+
+En este ejercicio, deberás trabajar con clases abstractas en Java, aplicando conceptos de herencia y polimorfismo.
+
+El objetivo es modelar distintos tipos de dispositivos electrónicos que comparten comportamientos básicos, pero que los implementan de forma específica.
+
+
+Requisitos:
+
+Crear una clase abstracta llamada DispositivoElectronico.
+Definir en esta clase los siguientes métodos abstractos:
+abstract void encender();
+abstract void apagar();
+
+Clases derivadas:
+
+Televisor:
+Debe extender la clase DispositivoElectronico.
+Debe implementar los métodos encender() y apagar() con un comportamiento acorde a un televisor.
+Laptop:
+Debe extender la clase DispositivoElectronico.
+Debe implementar los métodos encender() y apagar() con un comportamiento acorde a una laptop.
+
+Instrucciones:
+
+Implemente la clase abstracta con sus métodos abstractos.
+Las clases Televisor y Laptop deben heredar de DispositivoElectronico.
+Implemente los métodos abstractos en cada clase derivada.
+Utilice la anotación @Override en los métodos redefinidos.
+El comportamiento de cada método debe reflejar el funcionamiento del dispositivo correspondiente.
+
+Consideraciones:
+
+Una clase abstracta no puede ser instanciada directamente.
+Las clases derivadas deben implementar todos los métodos abstractos.

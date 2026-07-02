@@ -1,0 +1,97 @@
+Ejercicios prácticos de Interface (Code Runner)
+
+Pregunta 1:
+
+En este ejercicio, deberás trabajar con interfaces en Java, aplicando su implementación en distintas clases para representar comportamientos comunes.
+El objetivo es modelar distintos tipos de contenido que pueden ser reproducidos, como canciones y podcasts.
+
+Requisitos:
+
+Crear una interfaz llamada Reproducible.
+Definir en la interfaz el siguiente método:
+
+void reproducir();
+
+Crear una clase llamada Cancion que implemente la interfaz.
+Crear una clase llamada Podcast que implemente la interfaz.
+
+Instrucciones:
+
+Ambas clases deben implementar el método reproducir().
+En la clase Cancion, el método debe imprimir un mensaje indicando que se está reproduciendo una canción.
+En la clase Podcast, el método debe imprimir un mensaje indicando que se está reproduciendo un episodio de podcast.
+Puede incluir atributos adicionales (por ejemplo, el título) si lo considera necesario.
+Utilice la palabra clave implements en ambas clases.
+Utilice la anotación @Override en los métodos implementados.
+
+Consideraciones:
+
+Ambas clases deben respetar la firma del método definida en la interfaz.
+El comportamiento debe diferenciarse según el tipo de contenido.
+
+Lo esperado:
+
+        System.out.println("Reproduciendo la canción: " + titulo);
+                System.out.println("Reproduciendo el episodio de podcast: " + titulo);
+
+Pregunta 2:
+
+En este ejercicio, deberás trabajar con interfaces en Java, aplicando el concepto de implementación de comportamientos.
+
+Las interfaces permiten definir métodos que luego serán implementados por las clases que las utilicen.
+
+
+Requisitos:
+
+Crear una interfaz llamada Saludable.
+Definir en la interfaz el siguiente método:
+public void saludar();
+Crear una clase llamada Persona que implemente la interfaz Saludable.
+
+Instrucciones:
+
+Implemente la interfaz Saludable en la clase Persona.
+Defina el método saludar() dentro de la clase Persona.
+El método debe imprimir el siguiente mensaje:
+Hola, soy una persona saludable.
+
+Consideraciones:
+
+Utilice la palabra clave implements para implementar la interfaz.
+Utilice la anotación @Override en el método implementado.
+Respete exactamente el mensaje solicitado.
+Por ejemplo:
+
+Prueba	Resultado
+Saludable persona = new Persona();
+persona.saludar();
+
+Salida esperada:
+Hola, soy una persona saludable.
+
+Pregunta 3:
+
+En este ejercicio, deberás trabajar con interfaces en Java y su implementación en múltiples clases, aplicando el concepto de polimorfismo.
+
+El objetivo es definir una operación matemática genérica y luego implementar distintas operaciones concretas.
+
+
+Requisitos:
+
+Crear una interfaz llamada OperacionMatematica.
+Definir en la interfaz el siguiente método:
+double ejecutar(double a, double b);
+Crear una clase llamada Suma que implemente la interfaz.
+Crear una clase llamada Multiplicacion que implemente la interfaz.
+
+Instrucciones:
+
+En la clase Suma, implemente el método ejecutar para retornar la suma de los dos valores.
+En la clase Multiplicacion, implemente el método ejecutar para retornar el producto de los dos valores.
+Utilice la palabra clave implements en ambas clases.
+Utilice la anotación @Override en los métodos implementados.
+
+Consideraciones:
+
+Ambas clases deben respetar la firma del método definida en la interfaz.
+El método debe retornar un valor de tipo double.
