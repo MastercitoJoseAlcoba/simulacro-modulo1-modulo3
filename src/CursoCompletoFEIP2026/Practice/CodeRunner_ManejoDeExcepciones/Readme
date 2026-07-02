@@ -1,0 +1,104 @@
+Pregunta 1:
+
+En este ejercicio, deberás trabajar con el manejo de excepciones en Java, controlando errores comunes en la entrada de datos y en operaciones matemáticas.
+
+El objetivo es desarrollar un programa que solicite al usuario dos números enteros y realice la división entre ellos, evitando que el programa falle ante errores.
+
+
+Requisitos:
+
+Solicitar al usuario dos números enteros utilizando Scanner.
+Realizar la división entre ambos números.
+
+Instrucciones:
+
+Utilice un bloque try-catch para manejar posibles excepciones.
+Capture la excepción de división por cero.
+Capture la excepción de entrada no válida (por ejemplo, cuando el usuario ingresa texto en lugar de un número).
+En cada caso, muestre un mensaje claro indicando el error ocurrido.
+En caso de entrada inválida, limpie el buffer del Scanner para evitar problemas posteriores.
+
+Consideraciones:
+
+El programa no debe finalizar abruptamente ante un error.
+Utilice excepciones específicas para cada caso.
+Asegúrese de cerrar el Scanner al finalizar el programa.
+
+Por ejemplo:
+
+Entrada	Resultado
+10
+2
+Ingresa el primer número entero: Ingresa el segundo número entero: El resultado de la división es: 5.0
+abc
+Ingresa el primer número entero: Error: Ingresa números enteros válidos. Inténtalo de nuevo.
+
+
+Pregunta 2:
+
+En este ejercicio, deberás trabajar con el manejo de excepciones en Java, validando datos ingresados por el usuario.
+
+El objetivo es desarrollar un programa que solicite la edad de una persona, asegurando que la entrada sea válida y que se encuentre dentro de un rango permitido.
+
+
+Requisitos:
+
+Solicitar al usuario que ingrese su edad utilizando Scanner.
+Validar que la entrada sea un número entero.
+Validar que la edad esté dentro del rango permitido (entre 1 y 100).
+
+Instrucciones:
+
+Utilice un bloque try-catch para manejar errores de entrada no válida.
+Implemente una excepción personalizada para manejar edades fuera del rango.
+En caso de error, muestre un mensaje claro indicando el problema.
+Si la edad es válida, muestre un mensaje confirmándolo.
+En caso de entrada inválida, limpie el buffer del Scanner.
+
+Consideraciones:
+
+La edad debe estar entre 1 y 100 inclusive.
+Debe definirse una clase de excepción personalizada (por ejemplo, EdadFueraDeRangoException).
+Utilice la palabra clave throw para lanzar la excepción cuando corresponda.
+El programa no debe finalizar abruptamente ante errores.
+Por ejemplo:
+
+Entrada	Resultado
+25
+Ingresa tu edad: Edad válida: 25 años.
+120
+Ingresa tu edad: Error: La edad debe estar entre 1 y 100 años.
+
+Pregunta 3:
+
+En este ejercicio, deberás trabajar con el manejo de excepciones en Java, específicamente controlando errores al acceder a posiciones de un array.
+
+El objetivo es evitar que el programa falle cuando se intenta acceder a una posición fuera de los límites del arreglo.
+
+
+Requisitos:
+
+Declarar un array de enteros con tamaño fijo.
+Solicitar al usuario una posición del array.
+Intentar acceder al valor almacenado en esa posición.
+
+Instrucciones:
+
+Utilice un bloque try-catch para manejar posibles errores.
+Capture la excepción ArrayIndexOutOfBoundsException.
+Si la posición ingresada es válida, muestre el valor correspondiente.
+Si la posición es inválida, muestre un mensaje indicando el error.
+
+Consideraciones:
+
+El programa no debe finalizar abruptamente ante un error.
+Asegúrese de que el acceso al array esté dentro del bloque try.
+Puede utilizar Scanner para la entrada de datos.
+Por ejemplo:
+
+Entrada	Resultado
+10
+Ingresa una posición: Error: Intento de acceso a una posición no válida en el array.
+3
+Ingresa una posición: Valor en la posición 3: 40
+

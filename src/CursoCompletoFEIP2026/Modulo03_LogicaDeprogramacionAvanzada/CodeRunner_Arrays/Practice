@@ -1,0 +1,9 @@
+SumarFilasColumnas
+
+
+for (fila = 0; fila < matriz.length; fila++)
+     int suma = 0;
+
+     for (columna = 0; columna < matriz[fila].length;) {
+
+
