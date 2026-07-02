@@ -1,0 +1,15 @@
+El sistema hospitalario está desarrollado aplicando Programación Orientada a Objetos.
+
+La clase abstracta Persona contiene los atributos comunes nombre, documento y edad.
+Las clases Paciente y Medico heredan de Persona e implementan el método mostrarInformacion().
+
+También se utiliza una interfaz llamada Agendable, que obliga a Paciente y Medico a implementar el método agendarCita().
+
+El sistema utiliza ArrayList para almacenar pacientes, médicos y consultas.
+La clase Consulta relaciona un paciente, un médico, una fecha y un motivo.
+
+Además, se implementa sobrecarga de constructores en Paciente y Medico, permitiendo crear objetos con distinta cantidad de datos.
+
+Para el manejo de errores, se creó la excepción personalizada PacienteNoEncontradoException, que se lanza cuando se intenta trabajar con un paciente no registrado.
+
+Finalmente, se aplica polimorfismo al recorrer una lista de Persona que puede contener tanto pacientes como médicos.
