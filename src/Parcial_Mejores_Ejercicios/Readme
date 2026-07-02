@@ -1,19 +1,100 @@
-Parcial_Mejores_Ejercicios
-│
-├── 01_CalcularEdad.java
-├── 02_JuegoSemaforo.java
-├── 03_SumarParesArray.java
-├── 04_InvertirArray.java
-├── 05_SumarFilasMatriz.java
-├── 06_BubbleSort.java
-├── 07_ContarParesMatriz.java
-├── 08_FiboCuadrado.java
-├── 09_DuplicarInvertido.java
-├── 10_JuegoNumeros.java
-├── 11_UltimoImpar.java
-├── 12_Articulo.java
-├── 13_Libro.java
-├── 14_Vuelo.java
-├── 15_NormalizarTexto.java
-├── 16_ContarVocalesConsonantes.java
-├── 17_ISBN10.java
+# Mejores ejercicios para parcial - Java
+
+Esta carpeta reúne ejercicios importantes para practicar de cara al parcial de Java.
+
+Los ejercicios están organizados por tema: arrays, matrices, Strings, colecciones, POO, validaciones y algoritmos clásicos.
+
+---
+
+## Lista de ejercicios
+
+| Carpeta | Tema principal | Qué practica |
+|---|---|---|
+| `Articulo` | POO | Clase, atributos, constructores, getters y setters |
+| `AtenderClientes` | Queue | Cola FIFO, atención por orden de llegada |
+| `CalcularEdad` | Fechas | Uso de `LocalDate` y lógica sin `Period` |
+| `ContarFrecuencias` | Map | Conteo de palabras o elementos repetidos |
+| `ContarVocales` | String | Recorrer texto, contar vocales y consonantes |
+| `DuplicarInvertido` | Arrays | Invertir un array y duplicar valores |
+| `EncontrarUltimoImpar` | Arrays | Buscar el último número impar |
+| `FiboCuadrado` | Arrays / secuencias | Fibonacci y operaciones con valores |
+| `InvertirArray` | Arrays | Recorrido inverso |
+| `JuegoNumeros` | Condicionales | Múltiplos y condiciones combinadas |
+| `JuegoSemaforo` | Condicionales | Múltiplos de 2 y 5 |
+| `Normalizar` | String | Limpieza y transformación de texto |
+| `Numeros` | Arrays / lógica | Ejercicios generales con números |
+| `ObtenerParesDuplicados` | Listas | Recorrer listas y filtrar pares |
+| `OrdenBurbuja` | Ordenamiento | Bubble Sort |
+| `SumarFilas` | Matrices | Recorrer matriz y sumar por fila |
+| `SumarPares` | Arrays | Sumar números pares |
+| `UltimoImparDeUnArray` | Arrays | Buscar el último impar o devolver `-1` |
+| `Validar_ISBN` | Validación | Algoritmo ISBN-10 |
+| `ValidarTarjetas` | Validación | Algoritmo de validación de tarjetas |
+| `Vuelo` | POO | Constructores, atributos, pasajeros y validaciones |
+
+---
+
+## Temas que cubre esta carpeta
+
+- Variables y tipos de datos
+- Condicionales `if / else`
+- Bucles `for`
+- Arrays
+- Matrices
+- Strings
+- Listas
+- Mapas
+- Colas `Queue`
+- Programación orientada a objetos
+- Constructores
+- Getters y setters
+- Algoritmos de búsqueda
+- Algoritmos de ordenamiento
+- Validaciones
+
+---
+
+## Ejercicios más importantes para repasar primero
+
+Si tenés poco tiempo antes del parcial, repasá primero estos:
+
+1. `SumarPares`
+2. `SumarFilas`
+3. `InvertirArray`
+4. `OrdenBurbuja`
+5. `CalcularEdad`
+6. `ContarVocales`
+7. `Articulo`
+8. `Vuelo`
+9. `ContarFrecuencias`
+10. `Validar_ISBN`
+
+---
+
+## Recomendación de estudio
+
+Para cada ejercicio:
+
+1. Leer el enunciado.
+2. Escribir la firma del método.
+3. Identificar si se necesita contador, acumulador, bandera o array nuevo.
+4. Resolver primero en papel.
+5. Luego escribir el código en Java.
+6. Probar con casos simples.
+
+---
+
+## Plantillas mentales útiles
+
+### Contador
+
+```java
+int contador = 0;
+
+for (int i = 0; i < arreglo.length; i++) {
+    if (condicion) {
+        contador++;
+    }
+}
+
+return contador;va
