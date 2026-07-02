@@ -1,0 +1,25 @@
+Pregunta 7
+
+Título del ejercicio
+
+Contar frecuencia de palabras usando Map
+
+Enunciado
+
+Implementa un método llamado contarFrecuencias que reciba como parámetro una lista de palabras y devuelva un mapa donde
+cada palabra esté asociada a la cantidad de veces que aparece en la lista.
+
+En el mapa resultante:
+
+clave  -> palabra
+valor  -> cantidad de apariciones
+
+
+
+El método debe recorrer la lista completa y contar cuántas veces aparece cada palabra.
+
+No se debe implementar el método main.
+
+Firma del método requerida:
+
+public static Map<String, Integer> contarFrecuencias(List<String> palabras)

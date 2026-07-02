@@ -1,0 +1,15 @@
+Pregunta 5
+
+Título del ejercicio
+
+Sumar cada fila de una matriz
+
+Enunciado
+
+Implementa un método llamado sumarFilas que reciba como parámetro una matriz de números enteros y devuelva un array de enteros con la suma de cada fila.
+
+Cada posición del array resultante debe contener la suma de los elementos de la fila correspondiente de la matriz.
+
+Por ejemplo, la posición 0 del array devuelto debe contener la suma de la fila 0 de la matriz, la posición 1 debe contener la suma de la fila 1, y así sucesivamente.
+
+No se debe implementar el método main.

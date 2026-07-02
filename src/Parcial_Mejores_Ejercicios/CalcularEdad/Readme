@@ -1,0 +1,23 @@
+Pregunta 1
+
+Se desea crear un método en Java que permita calcular la edad de una persona a partir de su fecha de nacimiento y una fecha de referencia.
+
+La edad debe calcularse en años cumplidos, es decir, teniendo en cuenta si la persona ya cumplió años o no en la fecha de referencia indicada.
+
+Para resolver el ejercicio no se permite utilizar la clase Period de Java.
+
+El cálculo debe realizarse comparando el año, el mes y el día de la fecha de nacimiento con la fecha de referencia.
+
+La firma del método a realizar es:
+
+public int calcularEdad(LocalDate fechaNacimiento, LocalDate fechaReferencia)
+
+Reglas del método:
+El método debe cumplir con las siguientes condiciones:
+
+1. Recibe como parámetro la fecha de nacimiento de una persona.
+2. Recibe como parámetro una fecha de referencia.
+3. Debe devolver la edad de la persona en años cumplidos.
+4. No se puede utilizar la clase Period.
+5. Si la fecha de nacimiento es posterior a la fecha de referencia, el método debe devolver -1.
+6. No debe implementar el método main().

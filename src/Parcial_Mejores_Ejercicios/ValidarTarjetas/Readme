@@ -1,0 +1,18 @@
+Pregunta 9
+
+Queremos validar si un número recibido por la consola es un número de tarjeta de crédito válida.
+Para eso vamos a usar el Algoritmo de Luhn, que consiste en lo siguiente:
+Vamos a crear una funcion validarNumero, que reciba como parámetro un String que es el número de la tarjeta.
+Para hacer este algoritmo debemos invertir el número
+Multiplicar por 2 cada dígito que se encuentre en una posición impar.
+Si esa multiplicación es mayor o igual a 10 le debemos restar 9.
+Luego debemos sumar todos los números obtenidos.
+Si la suma total es múltiplo de 10 el número es válido.
+
+## La firma de la función es la siguiente:
+public boolean validarNumero(String tarjeta)
+
+
+. No debes incluir el método main, sólo completar la lógica del método
+
+. No debes probar el método con llamadas, de eso se encarga CodeRunner solo completa la lógica del método

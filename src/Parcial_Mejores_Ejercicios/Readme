@@ -1,0 +1,19 @@
+Parcial_Mejores_Ejercicios
+│
+├── 01_CalcularEdad.java
+├── 02_JuegoSemaforo.java
+├── 03_SumarParesArray.java
+├── 04_InvertirArray.java
+├── 05_SumarFilasMatriz.java
+├── 06_BubbleSort.java
+├── 07_ContarParesMatriz.java
+├── 08_FiboCuadrado.java
+├── 09_DuplicarInvertido.java
+├── 10_JuegoNumeros.java
+├── 11_UltimoImpar.java
+├── 12_Articulo.java
+├── 13_Libro.java
+├── 14_Vuelo.java
+├── 15_NormalizarTexto.java
+├── 16_ContarVocalesConsonantes.java
+├── 17_ISBN10.java

@@ -1,0 +1,34 @@
+Pregunta 2
+
+Ejercicio propuesto:  JuegoSemaforo
+Enunciado
+Escribe una función llamada juegoSemaforo que reciba como parámetro un número entero positivo n.
+
+La función debe imprimir por consola los números desde el 1 hasta el número n inclusive, con un salto de línea entre cada salida.
+
+Sin embargo:
+
+Si el número es múltiplo de 2, debe imprimir "rojo".
+Si el número es múltiplo de 5, debe imprimir "verde".
+Si el número es múltiplo de 2 y de 5 al mismo tiempo, debe imprimir "rojoverde".
+La función no debe retornar ningún valor.
+
+Ejemplo
+Si se ejecuta:
+
+  juegoSemaforo(12);
+
+La salida esperada sería:
+
+                            1
+                            rojo
+                            3
+                            rojo
+                            verde
+                            rojo
+                            7
+                            rojo
+                            9
+                            rojoverde
+                            11
+                            rojo

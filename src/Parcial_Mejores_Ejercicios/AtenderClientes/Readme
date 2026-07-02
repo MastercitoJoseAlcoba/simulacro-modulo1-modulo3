@@ -1,0 +1,26 @@
+Pregunta 8
+
+Título del ejercicio
+
+Atender clientes usando una cola
+
+Enunciado
+
+Implementa un método llamado atenderClientes que reciba como parámetros una cola de nombres de clientes y una cantidad máxima de clientes a atender.
+
+El método debe devolver una lista con los nombres de los clientes atendidos, respetando el orden de llegada de la cola.
+
+Una cola trabaja con el criterio FIFO:
+
+First In, First Out
+El primero en entrar es el primero en salir.
+
+Por lo tanto, el primer cliente que se encuentre en la cola debe ser el primero en ser atendido.
+
+El método debe atender como máximo la cantidad indicada. Si la cola tiene menos clientes que la cantidad solicitada, se deben atender todos los clientes disponibles.
+
+No se debe implementar el método main.
+
+Firma del método requerida:
+
+public static List<String> atenderClientes(Queue<String> cola, int cantidad)
