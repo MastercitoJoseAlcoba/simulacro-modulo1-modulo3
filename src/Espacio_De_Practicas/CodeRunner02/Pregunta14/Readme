@@ -1,0 +1,51 @@
+Pregunta 14
+
+Ejercicio: Imprimir histograma con numerales
+Completa el método llamado numeros.
+
+El método recibe un arreglo de enteros y debe imprimir un histograma usando numerales (#) separados por guiones (-), según los valores del arreglo.
+
+Método a implementar
+public void numeros(int[] arr)
+Funcionamiento
+Por cada número del arreglo, se debe imprimir una línea.
+
+Si el número es positivo, se debe imprimir:
+
+El número original.
+Un espacio.
+La cantidad de numerales correspondiente a ese número.
+Los numerales deben estar separados por guiones.
+Si el número es 0 o negativo, se debe imprimir solamente el número, sin numerales.
+
+Por ejemplo, si el arreglo recibido es:
+
+[1, 2, 3, 4]
+El método debe imprimir:
+
+1 #
+2 #-#
+3 #-#-#
+4 #-#-#-#
+Otro ejemplo:
+
+[-2, 0, 3]
+Debe imprimir:
+
+-2
+0
+3 #-#-#
+Importante
+No debes incluir el método main.
+No debes probar el método con llamadas. De eso se encarga CodeRunner.
+El método debe imprimir el resultado, no retornarlo.
+El método debe ser void.
+El último numeral de cada línea no debe llevar guion al final.
+Después de cada número y sus numerales debe imprimirse un salto de línea.
+Si el número es 0 o negativo, no se deben imprimir numerales.
+Considera los espacios exactamente como se muestran en los ejemplos.
+Código base
+public void numeros(int[] arr) {
+
+    // Complete el código aquí
+}

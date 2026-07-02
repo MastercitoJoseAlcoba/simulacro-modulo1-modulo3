@@ -1,0 +1,14 @@
+Pregunta 6
+
+Escribe un función en Java que reciba un array de enteros y devuelva el último número impar presente en el array.
+
+Si el array no contiene números impares, la función debe devolver -1.
+
+📥 Entrada
+Un array de números enteros.
+
+📤 Salida
+Un número entero que representa el último número impar encontrado en el array.
+Si no hay impares, retornar -1.
+
+La firma de la función es la siguiente: public int encontrarUltimoImpar(int[] numeros)

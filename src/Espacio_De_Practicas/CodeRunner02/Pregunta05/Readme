@@ -1,0 +1,10 @@
+Pregunta 5
+
+Completar la función contar, que recibe como parámetro una matriz que es de dos dimensiones. Esta matriz es de números enteros, y la función debe recorrer toda la matriz y devolver la cantidad de elementos que son pares.
+
+La firma de la función es la siguiente:
+
+public int contarPares(int[][] matriz)
+
+No debes incluir el método main, solo completar la lógica del método.
+No debes probar el método con llamadas, de eso se encarga CodeRunner, solo completar la lógica del método.

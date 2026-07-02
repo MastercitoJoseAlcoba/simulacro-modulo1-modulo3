@@ -1,0 +1,26 @@
+Pregunta 2
+
+Ejercicio: Crear la clase Vuelo
+Realice una clase llamada Vuelo que modele un vuelo de avión con los siguientes atributos privados:
+
+identificador (String): código o número identificador del vuelo.
+ciudadOrigen (String): ciudad de origen del vuelo.
+ciudadDestino (String): ciudad destino del vuelo.
+precio (double): precio del pasaje.
+capacidadMaxima (int): cantidad máxima de pasajeros que puede tener el vuelo.
+pasajerosActuales (int): número actual de pasajeros (comienza en 0).
+Debe incluir:
+
+Debe usar la sobrecarga de métodos, debe crear 3 contructores con las siguientes carateristicas.
+
+Un constructor que reciba e inicialice los atributos identificador, ciudadOrigen, ciudadDestino, precio y capacidadMaxima. El atributo pasajerosActuales debe inicializarse en 0.
+
+Crear un vuelo solo con identificador, ciudades y capacidad máxima (precio fijo definido por defecto $ 20000).
+
+Crear un vuelo solo con identificador, ciudades y precio (capacidad máxima definida por defecto 180).
+
+Métodos get para todos los atributos.
+
+Un método agregarPasajero() que aumente en 1 el número de pasajeros actuales si no se ha alcanzado la capacidad máxima. Debe devolver true si el pasajero pudo agregarse o false si el vuelo está lleno.
+
+Un método toString() que devuelva un resumen con la información del vuelo.

@@ -1,0 +1,29 @@
+Pregunta 11
+
+Vamos a escribir un procedimiento para que a partir de un texto pasado por parámetro, tengamos que mostrar y contar la cantidad de vocales y consonantes que tiene.
+
+Escribe una funció en Java que reciba una cadena de texto y determine cuántas vocales y consonantes contiene.
+
+Para este ejercicio, consideraremos como vocales: a, e, i, o, u (tanto mayúsculas como minúsculas).
+Las consonantes serán todas las demás letras del alfabeto.
+
+Los caracteres que no sean letras (números, espacios y símbolos) deben ignorarse.
+
+📥 Entrada
+Una cadena de texto con letras, espacios y otros caracteres.
+
+Ejemplo de entrada:
+
+Hola Mundo 123!
+📤 Salida
+Dos líneas indicando:
+
+Cantidad de vocales en la cadena.
+Cantidad de consonantes en la cadena.
+Ejemplo de salida:
+
+Vocales: 4
+Consonantes: 5
+
+La firma del método es la siguiente:
+public void contarVocalesYConsonantes(String texto)
