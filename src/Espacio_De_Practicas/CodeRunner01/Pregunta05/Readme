@@ -1,0 +1,16 @@
+Pregunta 5
+
+Completar la función padovan( n ), donde la función cada termino es la suma de los terminos tres y dos lugares anteriores. Los primeros terminos de la serie de Padovan son : 1 1 1 2 2 3 4 5 7 9
+
+P ( n )  = P(n-2) + P(n-3)
+
+Se debe devolver un array con los terminos de la serie solicitada, en el caso de n=10 se debe devolver 1 1 1 2 2 3 4 5 7 9
+
+en caso que n sea menor o igual a cero se debe devolver el array vacio.
+
+La firma de la función es la siguiente:
+
+public int[] padovan(int n)
+No debes incluir el método main, solo completar la lógica del método.
+No debes probar el método con llamadas, de eso se encarga CodeRunner, solo completar la lógica del método.
+labra));

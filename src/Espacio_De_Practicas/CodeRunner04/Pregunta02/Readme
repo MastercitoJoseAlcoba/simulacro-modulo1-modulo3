@@ -1,0 +1,12 @@
+Pregunta 2
+
+Descripción del problema:
+Implemente un procedimiento que intente realizar una división entera convirtiendo un texto a número. Se debe controlar cualquier posible excepción que interrumpa el flujo normal
+
+Firma del método: ejecutarCalculo(String texto, int divisor)
+
+Requisitos (Bloques try-catch):
+1. NumberFormatException: Si el texto no puede convertirse a entero, imprimir: "Error: Formato numérico invalido".
+2. ArithmeticException: Si el divisor es 0, imprimir: "Error: División por cero".
+4. Éxito: Si no hay errores, imprima el resultado de la división.
+

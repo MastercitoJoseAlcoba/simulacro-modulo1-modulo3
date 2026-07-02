@@ -1,0 +1,15 @@
+Pregunta 10
+
+Construya un programa que lea la calificación de un alumno en un examen y determine su estado académico:
+
+Si la calificación es mayor o igual a 8, debe imprimir APROBADO.
+
+En caso contrario, debe imprimir REPROBADO.
+
+📥 Entrada:
+
+Un número decimal que representa la calificación del alumno.
+
+📤 Salida:
+
+Una cadena de texto que indique el resultado (APROBADO o REPROBADO), sin texto adicional.

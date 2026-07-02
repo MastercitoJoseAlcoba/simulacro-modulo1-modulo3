@@ -1,0 +1,13 @@
+Pregunta 1
+
+Implementa un método llamado `diferenciaParesImpares` que reciba una matriz de enteros.
+
+El método debe:
+
+- Sumar todos los valores que se encuentren en columnas pares (índice 0, 2, 4, …).
+
+- Sumar todos los valores que se encuentren en filas impares (índice 1, 3, 5, …).
+
+- Calcular la resta entre ambas sumas.
+
+- Retornar siempre el valor positivo de esa resta.

@@ -1,0 +1,33 @@
+Pregunta 2
+
+Se quiere mostrar la tabla pitagórica (tabla de multiplicar) usando una matriz rectangular.
+
+Cada posición de la matriz contiene el resultado de multiplicar el número de la fila por el número de la columna.
+
+
+
+Escribe un programa en Java que:
+
+Lea 2 números enteros N y M.
+
+Cree una matriz NxM.
+
+Llene la matriz con la tabla pitagórica.
+
+Muestre la matriz por pantalla.
+
+
+Entrada:
+2 números enteros N ( 1 ≤ N ≤ 10 ) y M ( 1 ≤ M ≤ 10 ).
+Salida:
+La tabla pitagórica en formato de matriz.
+Cada fila en una línea.
+Los valores separados por un espacio.
+Si el valor de N o M está fuera de rango, imprimir "Número fuera de rango".
+Si el valor de N o M no es válido, imprimir "Entrada no válida".
+Para leer el entero, utilizar Scanner:
+Scanner sc = new Scanner(System.in);
+
+Recuerda que:
+"nextInt()" lee el siguiente valor entero de la entrada.
+"hasNextInt()" devuelve "true" si el siguiente valor en la entrada puede convertirse a un entero, de lo contrario devuelve "false".

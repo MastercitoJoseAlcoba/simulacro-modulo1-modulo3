@@ -1,0 +1,17 @@
+Pregunta 11
+
+Construya un programa que lea el sueldo de un trabajador y calcule su nuevo sueldo aplicando las siguientes reglas:
+
+Si el sueldo es inferior a 1000.00, se aplica un aumento del 15%.
+
+En caso contrario, se aplica un aumento del 12%.
+
+El programa debe imprimir únicamente el nuevo sueldo, con dos decimales, sin texto adicional.
+
+📥 Entrada:
+
+Un número decimal que representa el sueldo del trabajador.
+
+📤 Salida:
+
+Un número decimal que representa el nuevo sueldo del trabajador.

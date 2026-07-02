@@ -1,0 +1,37 @@
+Pregunta 5
+
+Descripción del problema:
+Cree una clase llamada Estudiante que represente el registro académico de un alumno.
+
+Atributos (privados):
+
+id de tipo String.
+
+nombre de tipo String.
+
+notaFinal de tipo double.
+
+Constructores:
+
+Un constructor sin parámetros que inicialice:
+id = "0", nombre = "N/N", notaFinal = 0.0
+
+Un constructor que reciba id y nombre.
+
+Un constructor que reciba los tres atributos.
+
+Métodos requeridos:
+
+Métodos get y set para los tres atributos siguiendo la convención estándar
+(ejemplo: getId, setId)
+
+Un método llamado estaAprobado() que retorne true si la notaFinal es mayor o igual a 6.0, caso contrario false.
+
+Sobrescribir toString() con el formato:
+"Estudiante [nombre] con nota [notaFinal]"
+
+Restricciones:
+
+La clase debe llamarse exactamente Estudiante.
+
+No debe incluir el método main

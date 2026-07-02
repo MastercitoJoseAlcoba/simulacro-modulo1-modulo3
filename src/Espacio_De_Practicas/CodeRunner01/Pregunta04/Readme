@@ -1,0 +1,11 @@
+Pregunta 4
+
+Completar la función validar letras, se debe pasar como parámetro un String que contenga letras, estas letras deben de ser las letras vocales, y el largo del String es valido si el largo es entre 3 y 6 letras. Se debe tomar como letras vocales tanto las minúsculas como las mayúsculas.
+
+Se deben cumplir ambas condiciones:
+
+La firma de la función es la siguiente:
+
+public boolean validarVocal(String palabra)
+No debes incluir el método main, solo completar la lógica del método.
+No debes probar el método con llamadas, de eso se encarga CodeRunner, solo completar la lógica del método.

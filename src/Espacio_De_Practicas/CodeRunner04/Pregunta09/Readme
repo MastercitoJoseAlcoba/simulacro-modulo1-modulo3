@@ -1,0 +1,21 @@
+Pregunta 9
+
+Escribe un programa que calcule la temperatura ambiente en grados Celsius a partir del número de sonidos (chirps) emitidos por un grillo en un minuto.
+
+La temperatura se calcula utilizando la siguiente fórmula:
+
+𝑇 = 𝑁 / 4 + 5
+
+Donde:
+
+N es el número de sonidos emitidos por el grillo en un minuto.
+
+T es la temperatura en grados Celsius.
+
+📥 Entrada:
+
+Un número entero N que representa la cantidad de sonidos emitidos por el grillo en un minuto.
+
+📤 Salida:
+
+Un número decimal que representa la temperatura en grados Celsius, con dos decimales, sin texto adicional.

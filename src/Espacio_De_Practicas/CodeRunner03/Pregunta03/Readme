@@ -1,0 +1,31 @@
+Pregunta 3
+
+Implemente en Java el método crearTabla que permita generar una tabla pitagórica utilizando una matriz bidimensional de enteros.
+
+El método deberá cumplir con las siguientes especificaciones:
+
+
+
+Requisitos del método
+El método debe crear y retornar una matriz bidimensional de enteros con:
+
+fila filas
+
+columna columnas
+
+Cada posición de la matriz debe contener el resultado de multiplicar el número de la fila por el número de la columna correspondiente.
+
+Tener en cuenta que los índices de los arreglos comienzan en 0, pero la tabla pitagórica comienza en 1.
+
+La matriz debe cargarse utilizando estructuras repetitivas (for).
+
+El método debe retornar la matriz completamente cargada.
+
+Restricciones
+❌ No se permite cargar valores manualmente.
+
+❌ No se permite el uso de colecciones (ArrayList, List, etc.).
+
+✔ Se debe utilizar una matriz bidimensional.
+
+✔ El método debe ser genérico, funcionando para cualquier cantidad de filas y columnas mayores que cero.

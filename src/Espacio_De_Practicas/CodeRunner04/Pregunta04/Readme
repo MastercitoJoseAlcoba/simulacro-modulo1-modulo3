@@ -1,0 +1,21 @@
+Pregunta 4
+
+Descripción del problema:
+Implemente un método en Java que reciba como parámetro la dimensión de una matriz cuadrada y genere una matriz de tamaño dimensión × dimensión. En dicha matriz se debe colocar el valor 7 únicamente en las columnas de los extremos (primera y última columna).
+Una vez generada la matriz, el método debe imprimirla por consola.
+
+Requisitos:
+
+El método debe llamarse public void generarColumnas(int dimension)
+
+Debe crear una matriz bidimensional de dimensión × dimensión.
+
+Solo las posiciones de la primera columna y la última columna deben contener el valor 7.
+
+El resto de las posiciones deben permanecer en 0.
+
+El método debe imprimir la matriz por consola, mostrando los valores separados por un espacio y cada fila en una nueva línea.
+
+El método no debe retornar la matriz.
+
+No debe incluir el método main.
