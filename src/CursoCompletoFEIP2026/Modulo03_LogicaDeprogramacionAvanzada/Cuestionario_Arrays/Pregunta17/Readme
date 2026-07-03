@@ -1,0 +1,19 @@
+¿ Cual de las siguientes formas es correcta para declarar un array multidimensional o matriz ?
+
+Respuesta
+
+a. byte [][] dias = new dias[7][7]; // Mal porque después de new debe ir el tipo de dato, no el nombre de la variable. Sería:
+
+b. int datos [] [] = new datos[3][3];
+
+c. int datosNuevos [][] = new datosNuevos[3][];
+
+d. String nombres [][] = new String [][];
+
+e. double temperaturas [][] = new double [30][30]; // Correcta
+
+f. int numeros [][][] = new int [10][10][10]; // Correcta
+
+g. notas [][] = new int [10] [10];
+
+h. short [][][] datos = new short [][];

@@ -1,0 +1,13 @@
+Pregunta 24
+
+¿ Que debo colocar para mostrar el contenido del elemento que dice Durazno ?
+
+Respuesta
+
+a. System.out.println(paises[1][0]); // CORRECTO
+
+b. System.out.println(paises[1][1]);
+
+c. System.out.println(paises[2][1]);
+
+d. System.out.println(paises[2][0]);

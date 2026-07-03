@@ -1,0 +1,28 @@
+Pregunta 1
+
+Cuál de las siguientes opciones es una forma correcta de definir un array unidimensional en Java ?
+
+Pregunta 1Respuesta
+
+a. suponemos que tenemos una clase Persona: Persona [] arrayPersonas = new Persona[100];
+
+b. boolean esVerdad [] = {true,false,"cierto",true};
+
+c. String datos[] = {"Hola","nombre",10,false};
+
+d. double precios[] = {123.20,114.60,115,850.0,952.50};
+
+e. char [] caracteres = {'a', 'b', 'c'};
+
+f. int datos[] = new datos[5];
+
+g. short corto [] = short[10];
+
+h. String mensajes[] = new String[10];
+
+Respuestas correctas son:
+
+a. Correcta: crea un array de 100 objetos Persona.
+d. Correcta: aunque 115 no tiene decimal, Java lo puede guardar como double → 115.0.
+e. Correcta: array de caracteres.
+h. Correcta: array de 10 String.

@@ -1,0 +1,21 @@
+Pregunta 7
+
+Dado el siguientes array de double :
+
+
+
+                      double precios [] = {133.5,500,700.25,670,900.55,101.68};
+
+
+
+Como debo hacer para ver el valor del elemento del array precios que esta en la última posición?
+
+Respuesta
+
+a. precios[precios.length];
+
+b. precios[4];
+
+c. precios[precios.length-1]; // Correcta
+
+d. precios[-1];

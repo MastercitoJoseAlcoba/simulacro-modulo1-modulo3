@@ -1,0 +1,23 @@
+Pregunta 13
+
+Dado el siguientes array de double :
+
+
+
+                      double precios [] = {133.5,500,700.25,670,900.55,101.68};
+
+
+
+Como debo hacer para ver el valor del elemento del array precios que esta en la primer posición?
+
+Respuesta
+
+a. precios(1)
+
+b. precios[1]
+
+c. precios[0] // Correcta
+
+d. precios(0)
+
+

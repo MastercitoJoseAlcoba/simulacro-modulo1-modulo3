@@ -1,0 +1,27 @@
+Pregunta 1
+
+La respuesta correcta es:
+
+d. [Antonio, Carmen, Oscar]
+
+Porque Stack funciona como pila: el último que entra es el primero que sale. Como una pila de platos.
+
+Paso a paso:
+nombres.push("Antonio"); // [Antonio]
+nombres.push("Carmen");  // [Antonio, Carmen]
+nombres.push("Mariana"); // [Antonio, Carmen, Mariana]
+nombres.push("Dante");   // [Antonio, Carmen, Mariana, Dante]
+
+Ahora vienen los pop():
+nombres.pop(); // saca Dante
+// [Antonio, Carmen, Mariana]
+
+nombres.pop(); // saca Mariana
+// [Antonio, Carmen]
+
+Luego agrega Oscar:
+nombres.push("Oscar");
+// [Antonio, Carmen, Oscar]
+
+Entonces imprime:
+[Antonio, Carmen, Oscar]

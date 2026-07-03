@@ -1,0 +1,9 @@
+Pregunta 29
+
+a. System.out.println(datos[1][2]); // Correcto
+
+b. System.out.println(datos[2][3]);
+
+c. System.out.println(datos[0,2]);
+
+d. System.out.println(datos[0][2]);

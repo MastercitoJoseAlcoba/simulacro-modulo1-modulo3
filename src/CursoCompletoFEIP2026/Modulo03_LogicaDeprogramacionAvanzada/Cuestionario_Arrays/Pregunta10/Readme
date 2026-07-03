@@ -1,0 +1,17 @@
+Pregunta 10
+
+Dado la siguiente línea de código en Java de la declaración de una matriz :
+
+int datos [] [] = { {4,5,1,7,3}, {13,4,56,12,10} };
+
+¿ Cuales son sus dimensiones ?
+
+Pregunta 10Respuesta
+
+a. 3 x 4
+
+b. 2 x 4
+
+c. 2 x 5 // Correcta
+
+d. 1 x 5

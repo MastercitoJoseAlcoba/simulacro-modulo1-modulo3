@@ -1,0 +1,21 @@
+Pregunta 3
+
+Supongamos el ejemplo que esta en el documento sobre arrays, donde:
+
+boolean[][][] cine = new boolean[2][3][4]; // 2 salas, 3 filas por sala, 4 asientos por fila
+                                           // Suponemos que todo el arreglo es inicializado a `true` por brevedad
+
+cine[0][1][2] = false; // Marca un asiento como ocupado
+
+
+a. El asiento en la segunda sala, primera fila, tercer asiento está ocupado.
+
+b. El asiento en la primera sala, segunda fila, tercer asiento está disponible.
+
+c. El asiento en la primera sala, segunda fila, tercer asiento está ocupado.
+
+d. Todos los asientos en todas las salas están disponibles.
+
+Respuesta correcta: c
+
+

@@ -1,0 +1,17 @@
+Pregunta 12
+
+Dada la siguiente definición de un array unidimensional :
+
+   String varios [] = { "Juan","Pedro",23,true};
+
+Podemos afirmar lo siguiente :
+
+Respuesta
+
+a. Esta definición no es correcta ya que el array en Java solo admite un tipo de dato. // Correcta
+
+b. Para que funcione correctamente solo debo sacar el valor true.
+
+c. Esta definición es correcta ya que el array en Java admite diferentes tipos de datos.
+
+d. Para que funcione correctamente solo debo sacar el valor 23.

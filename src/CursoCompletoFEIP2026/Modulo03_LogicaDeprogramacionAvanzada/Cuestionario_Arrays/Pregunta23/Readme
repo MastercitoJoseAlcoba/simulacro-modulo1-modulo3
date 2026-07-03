@@ -1,0 +1,13 @@
+Pregunta 23
+
+Considerando el arreglo tridimensional boolean[][][]cine que representa la disponibilidad de asientos en un cine, con salas, filas, y asientos individuales, ¿cuál es la forma correcta de inicializar todos los asientos de todas las salas a true (disponibles) en Java?
+
+Respuesta
+
+a. for (int i = 0; i < cine.length; i++) { for (int j = 0; j < cine[i].length; j++) { for (int k = 0; k < cine[i][j].length; k++) { cine[i][j][k] = true; } } } // Correcto
+
+b. Arrays.fill(cine, true);
+
+c. for (boolean[][] sala : cine) { for (boolean[] fila : sala) { Arrays.fill(columna, true); } }
+
+d. Arrays.fill(cine[0][0], true);
