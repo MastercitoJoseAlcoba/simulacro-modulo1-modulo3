@@ -29,6 +29,9 @@ public class Libro {
         this.numeroPaginas = numeroPaginas;
     }
 
+    public Libro(String sql) {
+    }
+
     public String getTitulo() {
         return titulo;
     }
