@@ -44,7 +44,7 @@ public class Operadores {
      * 1. a inicia en 10 y se decrementa dos veces: queda en 8.
      * 2. b inicia en -20, se decrementa una vez y luego cuatro veces dentro del for: queda en -15.
      * 3. suma = 8 +(-14) + 50 = 44.
-     *      * 4. oper evalúa false || false, por lo tanto, queda false.
+     * 4. oper evalúa false || false, por lo tanto, queda false.
      *
      */
 }
