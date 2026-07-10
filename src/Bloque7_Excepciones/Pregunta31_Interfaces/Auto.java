@@ -1,6 +1,6 @@
 package Bloque7_Excepciones.Pregunta31_Interfaces;
 
-public class Auto extends Vehiculo {
+public class Auto implements Vehiculo {
     // Auto implementa la interfaz Vehiculo.
     //
     // Para implementar una interfaz se usa:

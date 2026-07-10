@@ -4,8 +4,12 @@ public class Auto extends Vehiculo {
     private int cantidadPuertas;
 
     public Auto(String marca, int cantidadPuertas) {
-        super(marca);
+        super();
         this.cantidadPuertas = cantidadPuertas;
+    }
+
+    public Auto() {
+
     }
 
     public void mostrar() {

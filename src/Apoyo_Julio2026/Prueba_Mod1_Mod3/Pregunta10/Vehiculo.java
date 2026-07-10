@@ -3,7 +3,7 @@ package Apoyo_Julio2026.Prueba_Mod1_Mod3.Pregunta10;
 public class Vehiculo {
     protected String marca;
 
-    public Vehiculo(String marca) {
+    public Vehiculo() {
         this.marca = marca;
     }
 

@@ -1,0 +1,26 @@
+Pregunta 1
+
+En este ejercicio, trabajáras con una matriz bidimensional de caracteres de tamaño n x n.
+El objetivo es completar la matriz de forma que, al mostrarla por pantalla, el contorno o perímetro quede formado por el
+carácter #, mientras que las posiciones internas deben contener el carácter espacio vacío.
+
+Ejemplo:
+
+Si n = 6, la salida esperada al mostrar la matriz debe ser la siguiente:
+
+# # # # # #
+#         #
+#         #
+#         #
+#         #
+# # # # # #
+
+Consigna:
+
+Complete el método matrizMostrar, que recibe como parámetro una matriz bidimensional de caracteres, para que cargue
+correctamente su contenido antes de mostrarla.
+
+Debe cumplir las siguientes condiciones:
+
+1. Las posiciones del borde de la matriz deben contener el carácter #.
+2. Las posiciones internas deben contener el carácter espacio " ".

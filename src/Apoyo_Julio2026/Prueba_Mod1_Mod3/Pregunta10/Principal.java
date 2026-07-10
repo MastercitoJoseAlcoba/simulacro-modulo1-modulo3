@@ -2,7 +2,7 @@ package Apoyo_Julio2026.Prueba_Mod1_Mod3.Pregunta10;
 
 public class Principal {
     public static void main(String[] args) {
-        Vehiculo v1 = new Vehiculo("Genérica");
+        Vehiculo v1 = new Vehiculo();
 
         Vehiculo a1 = new Auto("Toyota", 4);
 

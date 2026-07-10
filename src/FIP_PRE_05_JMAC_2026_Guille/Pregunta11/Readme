@@ -1,0 +1,16 @@
+Interfaces en Java
+
+¿Cuáles de las siguientes afirmaciones NO son verdaderas?
+
+1. Una interfaz en Java puede contener métodos abstractos y métodos con implementación por defecto (default).
+2. Una interfaz puede tener atributos de instancia que cambian su valor durante la ejecución.
+3. Las interfaces pueden extender de otras interfaces.
+4. Una interfaz puede crear instancias usando el operador new.
+5. una interfaz no puede implementar métodos del tipo default.
+
+a. 3-4-5
+b. 2-4-5 // Correcta
+c. 1-3
+d. 2-4
+
+

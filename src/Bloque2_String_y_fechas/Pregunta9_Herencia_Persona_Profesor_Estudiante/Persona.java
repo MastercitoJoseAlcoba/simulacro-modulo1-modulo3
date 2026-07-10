@@ -43,5 +43,9 @@ public class Persona {
     public int getEdad() {
         return 0;
     }
+
+    public int get() {
+        return 0;
+    }
 }
 
