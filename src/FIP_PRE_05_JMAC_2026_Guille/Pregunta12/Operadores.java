@@ -4,25 +4,37 @@ public class Operadores {
     // Dadas las informaciones indicadas, ¿cuáles son verdaderas?
     public static void main(String[] args) {
         int a = 10, b = -20, c = 50;
-        a--;
-        a--;
-        b++;
+        a--; // a = 9
+        a--; // a = 8
+        b++; // b = -19
 
         for (int i = 0; i < 5; i++) {
             b++;
         }
+        // El for incrementa b cinco veces:
+        // -19 → -18 → -17 → -16 → -15 → -14
 
         boolean oper = a + b > 10 || c + b < 10;
+        // 8 + (-14) > 10 || 50 + (-14) < 10
+        // -6 > 10 || 36 < 10
+        // false || false
+        // false
+
+
         int suma = a + b + c;
+        // 8 + (-14) + 50
+        // -6 + 50
+        // 44
+
         System.out.println(oper); // false || false = false
-        System.out.println(suma); // 8 - 15 + 50 = 43
+        System.out.println(suma); // 8 - 15 + 50 = 44
     }
 
     /**
      * Dada las siguientes afirmaciones:
      *
      * 1. El valor de la variable suma la termina el programa es 46.
-     * 2. El valor que se imprime de la variable suma por consola es 43. // Correcta
+     * 2. El valor que se imprime de la variable suma por consola es 44. // Correcta
      * 3. El valor de la variable oper al terminar el programa es true.
      * 4. El valor de la variable oper que se imprime por consola al terminar el programa es false. // Correcta
      *
@@ -31,8 +43,8 @@ public class Operadores {
      * Explicación:
      * 1. a inicia en 10 y se decrementa dos veces: queda en 8.
      * 2. b inicia en -20, se decrementa una vez y luego cuatro veces dentro del for: queda en -15.
-     * 3. suma = 8 +(-15) + 50 = 43.
-     * 4. oper evalúa false || false, por lo tanto, queda false.
+     * 3. suma = 8 +(-14) + 50 = 44.
+     *      * 4. oper evalúa false || false, por lo tanto, queda false.
      *
      */
 }
