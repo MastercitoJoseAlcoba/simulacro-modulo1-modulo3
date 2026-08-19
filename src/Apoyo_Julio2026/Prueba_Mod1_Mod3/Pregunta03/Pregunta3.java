@@ -70,6 +70,7 @@ public class Pregunta3 {
                                                   // Tiene 3 filas, entonces el resultado tendrá 3 posiciones.
 
         for (int i = 0; i < matriz.length; i++) { // Recorre las filas de la matriz.
+
             sumaFilas[i] = 0;
 
             for (int j = 0; j < matriz[i].length; j++) { // Recorre los valores dentro de cada fila.
