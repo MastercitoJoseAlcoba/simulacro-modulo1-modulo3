@@ -3,31 +3,42 @@ package FIP_PRE_05_JMAC_2026_Guille.Matrices_Bidimensionales_Con_Char.MatrizConC
 public class Ejercicio2 {
 
     public static void main(String[] args) {
+        int n = 5; // Tamaño de la matriz: 5 filas y 5 columnas
 
-        int n = 5;
+        char[][] matriz = new char[n][n]; // Creo una matriz de caracteres de 5 x 5
 
-        char[][] matriz = new char[n][n];
+        for (int i = 0; i < matriz.length; i++) { // i recorre las FILAS: 0, 1, 2, 3, 4
 
-        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) { // j recorre las COLUMNAS de cada fila
 
-            for (int j = 0; j < matriz[i].length; j++) {
 
-                if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
-                    matriz[i][j] = '#';
+                if (i == 0 ||                         // Primera fila
+                        i == matriz.length - 1 ||     // Última fila
+                        j == 0 ||                     // Primera columna
+                        j == matriz[i].length - 1) {  // Última columna
+
+                    matriz[i][j] = '#'; // Si está en algún borde, guarda '#'
+
                 } else {
-                    matriz[i][j] = ' ';
+
+                    matriz[i][j] = ' '; // Si está en el interior, guarda un espacio
                 }
             }
         }
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        // =====================================================
+        // IMPRIMIR LA MATRIZ
+        // =====================================================
 
-                System.out.print(matriz[i][j] + " ");
+        for (int i = 0; i < matriz.length; i++) { // Recorro nuevamente las filas
+
+            for (int j = 0; j < matriz[i].length; j++) { // Recorro las columnas
+
+                System.out.print(matriz[i][j] + " "); // Imprimo cada posición sin saltar de línea
             }
 
-            System.out.println();
+            System.out.println(); // Al terminar una fila, paso a la siguiente línea
         }
     }
 }

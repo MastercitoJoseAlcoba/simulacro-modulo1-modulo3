@@ -4,20 +4,21 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
 
-        char[][] matriz = {
-                {'a', 'b', 'c'},
-                {'d', 'e', 'f'},
-                {'g', 'h', 'i'}
+        char[][] matriz = { // Creo una matriz de caracteres de 3 filas x 3 columnas
+                {'a', 'b', 'c'}, // Fila 0
+                {'d', 'e', 'f'}, // Fila 1
+                {'g', 'h', 'i'}  // Fila 2
         };
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        for (int i = 0; i < matriz.length; i++) { // i recorre las FILAS: 0, 1, 2
 
-                System.out.print(matriz[i][j] + " ");
+            for (int j = 0; j < matriz[i].length; j++) { // j recorre las COLUMNAS de cada fila
+
+                System.out.print(matriz[i][j] + " "); // Imprime el carácter de la posición [fila][columna]
             }
 
-            System.out.println();
+            System.out.println(); // Cuando termina una fila, hace salto de línea
         }
     }
 }

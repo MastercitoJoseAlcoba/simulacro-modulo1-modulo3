@@ -4,30 +4,42 @@ public class Ejercicio7 {
 
     public static void main(String[] args) {
 
-        int n = 5;
+        int n = 5; // Tamaño de la matriz: 5 filas y 5 columnas
 
-        char[][] matriz = new char[n][n];
+        char[][] matriz = new char[n][n]; // Creo una matriz de caracteres de 5 x 5
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        for (int i = 0; i < matriz.length; i++) { // i recorre las FILAS
 
-                if (i == n / 2 || j == n / 2) {
-                    matriz[i][j] = '#';
+            for (int j = 0; j < matriz[i].length; j++) { // j recorre las COLUMNAS
+
+
+                if (i == n / 2 ||      // Sí estamos en la FILA central
+                        j == n / 2) {  // O en la COLUMNA central
+
+                    matriz[i][j] = '#'; // Guarda '#' formando una cruz
+
+
                 } else {
-                    matriz[i][j] = '.';
+
+                    matriz[i][j] = '.'; // Si no está en la cruz, guarda '.'
                 }
             }
         }
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        // =====================================================
+        // IMPRIMIR LA MATRIZ
+        // =====================================================
 
-                System.out.print(matriz[i][j] + " ");
+        for (int i = 0; i < matriz.length; i++) { // Recorro nuevamente las FILAS
+
+            for (int j = 0; j < matriz[i].length; j++) { // Recorro las COLUMNAS
+
+                System.out.print(matriz[i][j] + " "); // Imprimo cada posición
             }
 
-            System.out.println();
+            System.out.println(); // Al terminar una fila, salto de línea
         }
     }
 }

@@ -4,30 +4,41 @@ public class Ejercicio6 {
 
     public static void main(String[] args) {
 
-        int n = 5;
+        int n = 5; // Tamaño de la matriz: 5 filas y 5 columnas
 
-        char[][] matriz = new char[n][n];
+        char[][] matriz = new char[n][n]; // Creo una matriz de caracteres de 5 x 5
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        for (int i = 0; i < matriz.length; i++) { // i recorre las FILAS
 
-                if (i == j || i + j == n - 1) {
-                    matriz[i][j] = 'X';
+            for (int j = 0; j < matriz[i].length; j++) { // j recorre las COLUMNAS
+
+
+                if (i == j ||                  // Diagonal principal
+                        i + j == n - 1) {          // Diagonal secundaria
+
+                    matriz[i][j] = 'X'; // Si pertenece a alguna de las dos diagonales, guarda 'X'
+
                 } else {
-                    matriz[i][j] = '.';
+
+                    matriz[i][j] = '.'; // Si no pertenece a ninguna diagonal, guarda '.'
                 }
             }
         }
 
-        for (int i = 0; i < matriz.length; i++) {
 
-            for (int j = 0; j < matriz[i].length; j++) {
+        // =====================================================
+        // IMPRIMIR LA MATRIZ
+        // =====================================================
 
-                System.out.print(matriz[i][j] + " ");
+        for (int i = 0; i < matriz.length; i++) { // Recorro nuevamente las FILAS
+
+            for (int j = 0; j < matriz[i].length; j++) { // Recorro las COLUMNAS
+
+                System.out.print(matriz[i][j] + " "); // Imprimo cada posición
             }
 
-            System.out.println();
+            System.out.println(); // Al terminar una fila, salto de línea
         }
     }
 }
