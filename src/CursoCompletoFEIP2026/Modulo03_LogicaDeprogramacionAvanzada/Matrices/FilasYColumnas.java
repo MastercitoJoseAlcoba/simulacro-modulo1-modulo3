@@ -1,4 +1,4 @@
-package Modulo03_LogicaDeProgramacionAvanzada.Matrices.FilasYColumnas;
+package CursoCompletoFEIP2026.Modulo03_LogicaDeprogramacionAvanzada.Matrices;
 
 import java.util.Arrays;
 
