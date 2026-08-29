@@ -9,21 +9,21 @@ public class Pregunta7 {
 
         public static Map<String, Integer> contarFrecuencias(List<String> palabras) {
 
-            Map<String, Integer> resultado = new LinkedHashMap<String, Integer>();
+            Map<String, Integer> frecuencias = new LinkedHashMap<String, Integer>();
 
             for (int i = 0; i < palabras.size(); i++) {
 
                 String palabra = palabras.get(i);
 
-                if (resultado.containsKey(palabra)) {
-                    resultado.put(palabra, resultado.get(palabra) + 1); // Si la palabra ya existe en el mapa, le sumás 1.
-                                                                        // Si no existe, la agregás con valor 1.
+                if (frecuencias.containsKey(palabra)) {
+                    frecuencias.put(palabra, frecuencias.get(palabra) + 1); // Si la palabra ya existe en el mapa, le sumás 1.
+                                                                            // Si no existe, la agregás con valor 1.
                 } else {
-                    resultado.put(palabra, 1);
+                    frecuencias.put(palabra, 1);
                 }
             }
 
-            return resultado;
+            return frecuencias;
         }
     }
 
