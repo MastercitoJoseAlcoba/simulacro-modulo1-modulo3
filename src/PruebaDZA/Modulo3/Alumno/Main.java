@@ -48,6 +48,9 @@ public class Main {
         if (listaAlumnos.contains(new Alumno("Pedro", 35, (byte) 4)))
             System.out.println("La lista contiene el alumno Pedro");
 
+        if (listaAlumnos.addAll(listaAlumnos.reversed()))
+            System.out.println("Se ha añadido la lista a la lista");
+
     }
 
     // Creando el método mostrar datos

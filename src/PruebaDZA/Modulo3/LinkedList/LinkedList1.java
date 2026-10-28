@@ -1,4 +1,4 @@
-package PruebaDZA.Modulo3;
+package PruebaDZA.Modulo3.LinkedList;
 
 import java.util.*;
 
