@@ -54,6 +54,20 @@ public class LinkedList1 {
 
         System.out.println(lista2);
 
+        // Con este formato agrega a la lista (new)
+        Integer [] numeros = {1,2,3,4,5,6,7,8,9,10};
+        ArrayList<Integer> listaNumeros = new ArrayList<>(Arrays.asList(numeros));
+        System.out.println(listaNumeros);
+        listaNumeros.add(11);
+        System.out.println(listaNumeros);
+
+        // Con este formato no agrega a la lista y queda inmutable
+        Integer [] numeros2 = {1,2,3,4,5,6,7,8,9,10};
+        ArrayList<Integer> listaNumeros2 = (ArrayList<Integer>) Arrays.asList(numeros2);
+        System.out.println(listaNumeros2);
+        listaNumeros2.add(11);
+        listaNumeros2.set(0, 11);
+        System.out.println(listaNumeros2);
     }
 
 }

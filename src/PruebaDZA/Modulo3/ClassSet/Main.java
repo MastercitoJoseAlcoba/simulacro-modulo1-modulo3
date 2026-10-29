@@ -28,8 +28,8 @@ public class Main {
 
         // Recorrido con iterador
         java.util.Iterator<String> str = colores.iterator();
-        while (str.hasNext()) {
-            System.out.println(str.next());
+        while (str.hasNext()) { // While ay otro toma el siguiente, next avanza
+            System.out.println(str.next()); // Imprime el siguiente elemento
         }
     }
 }
