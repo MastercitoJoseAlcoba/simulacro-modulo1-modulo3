@@ -22,8 +22,8 @@ public class Main {
 
         String dato1 = "Ana";
         String dato2 = dato1.replace("a", "o");
-        boolean iguales2 = dato1.equals(dato2);
-        System.out.println("Las variables dato y dato2 son iguales con método equals " + iguales);
+        boolean igual = dato1.equals(dato2);
+        System.out.println("Las variables dato y dato2 son iguales con método equals " + igual);
 
         for (int i = 0; i < dato1.length(); i++) {
             System.out.println(dato1.charAt(i));
