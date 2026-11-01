@@ -1,5 +1,7 @@
 package PruebaDZA.Modulo3.LinkedList;
 
+import CursoCompletoFEIP2026.Modulo03_LogicaDeprogramacionAvanzada.CollectionsShuffle;
+
 import java.util.*;
 
 public class LinkedList1 {
@@ -10,6 +12,14 @@ public class LinkedList1 {
         lista.add("Amarillo");
         lista.add("Blanco");
         lista.add("Negro");
+
+        // Ordenamos alfabéticamente por nombre
+        Collections.sort(lista);
+
+        // Ordenamos en forma aleatoria
+        CollectionsShuffle collectionsShuffle = new CollectionsShuffle();
+        System.out.println(collectionsShuffle);
+
 
         // Mostrar el tamaño
         System.out.println(lista.size());

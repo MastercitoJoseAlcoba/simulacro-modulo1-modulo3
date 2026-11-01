@@ -1,0 +1,24 @@
+F,Ana Perez,Yi 1122,23232111,8
+F,Jose Diaz,Oribe 123,1231234,18
+C,La Pizzeria,Rivera 3522,21801122332,21
+C,El Lavadero,Colonia 2312,218821321,54
+C,El fogon,Soriano 1513,2134211251,36
+F,Roberto Rivas,19 de abril 2029,121212122,45
+F,Mario Piriz,Durazno 2342,23344411,8
+F,Lorena Rodriguez,Ejido 1010,23232123,12
+C,La Barcelonesa,Ejido 1212,218025215,8
+C,IBM,18 de Julio 1121,2181612124,95
+C,La Pasiva,18 de julio 1421,2180000121,32
+F,Pablo Rios,Grecia 1212,1121231,18
+F,Andrea Pole,Yi 212,24444441,16
+F,Juanito Diez,Oribe 1211,55231234,19
+C,La Panaderia,Soco 1022,21805532531,15
+C,La Tintoreria,Vazquez 1485,2122111321,24
+C,El Dorado,Mercedes 1215,2133231231,16
+F,Luis Costa,18 de julio 920,32412122,15
+F,Marta Gonzalez,Lavalleja 222,2343344111,18
+F,Lourdes Blanco,Misiones 910,2332232123,9
+C,La Fruteria,Misiones 122,243704215,18
+C,Fabrica de Pastas,18 de Julio 421,2143323200,65
+C,La Carniceria,18 de julio 421,2153242121,12
+F,Pablo Fagundez,Grecia 212,32321231,20
