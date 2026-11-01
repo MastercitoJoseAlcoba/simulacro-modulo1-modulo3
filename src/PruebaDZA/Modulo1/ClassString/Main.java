@@ -12,7 +12,7 @@ public class Main {
         boolean termina = str.endsWith("a");
         boolean esVacio = str.isEmpty();
         boolean esta = str.contains("o");
-        boolean boooe = str.equals("Hola");
+        boolean iguales = str.equals("Hola");
         int pos = str.indexOf("a");
         String otra = str.substring(1);
         char primerCaracter = str.charAt(0);
@@ -22,7 +22,7 @@ public class Main {
 
         String dato1 = "Ana";
         String dato2 = dato1.replace("a", "o");
-        boolean iguales = dato1.equals(dato2);
+        boolean iguales2 = dato1.equals(dato2);
         System.out.println("Las variables dato y dato2 son iguales con método equals " + iguales);
 
         for (int i = 0; i < dato1.length(); i++) {
