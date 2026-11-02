@@ -28,8 +28,6 @@ public class Main {
         for (int i = 0; i < dato1.length(); i++) {
             System.out.println(dato1.charAt(i));
         }
-
-
     }
 
     private static Object replace(String o, String a) {
