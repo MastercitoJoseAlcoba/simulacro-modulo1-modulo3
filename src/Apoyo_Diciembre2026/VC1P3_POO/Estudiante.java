@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC1P3_Poo;
+package Apoyo_Diciembre2026.VC1P3_POO;
 
 public class Estudiante {
     // Atributos
