@@ -62,6 +62,7 @@ public class Producto {
 
     public boolean tieneStockSuficiente() {
         // «10 unidades o más» incluye exactamente 10.
+        // También se puede hacer: return stock >= 10;
         if (stock >= 10) {
             return true;
         }
