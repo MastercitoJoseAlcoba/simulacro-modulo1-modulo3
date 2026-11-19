@@ -44,7 +44,10 @@ public class Producto {
 
     public void setCategoria(String categoria) {
         // La misma regla se aplica al texto recibido como categoría.
-        if (categoria != null && !categoria.isEmpty()) {
+        // El nombre y la categoría solo se modifican si el valor es distinto de `null` y la cadena no està vacía.
+        // Significa: << La cadena no est vacía«» significa que el texto tiene al menos un carácter. En tu setNombre, esa
+        // parte de la letra se escribe =!nombre.isEmpty().
+        if (categoria != null && !categoria.isEmpty()) { // Si el nombre es distinto de null y tiene al menos un carácter, lo guardo.
             this.categoria = categoria;
         }
     }
