@@ -3,7 +3,7 @@
 Creá una clase `Producto` para representar un artículo en el inventario de un comercio.
 
 ```java
-package Apoyo_Diciembre2026.VC4P4_POO_Ej_Dificultad_Examen;
+package Apoyo_Diciembre2026.VC4P4_POO_NewOpcion;
 ```
 
 ## Atributos privados
