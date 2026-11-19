@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC4P4_POO_Ej_Dificultad_Examen;
+package Apoyo_Diciembre2026.VC1P4_POO_DificultadMaxima;
 
 public class Pelicula {
 
