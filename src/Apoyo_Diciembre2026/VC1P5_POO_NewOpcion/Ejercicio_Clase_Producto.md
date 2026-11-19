@@ -22,7 +22,7 @@ package Apoyo_Diciembre2026.VC4P4_POO_NewOpcion;
 
 Creá un getter y un setter para cada atributo.
 
-- El nombre y la categoría solo se modifican si el valor es distinto de `null` y la cadena no está vacía.
+- El nombre y la categoría solo se modifican si el valor es distinto de `null` y la cadena no està vacía.
 - El stock solo se modifica si el valor es mayor o igual a `0`.
 
 ## Métodos
