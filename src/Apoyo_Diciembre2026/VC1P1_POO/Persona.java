@@ -4,7 +4,6 @@ public class Persona {
     public static void main(String[] args) {
 
     }
-
     // Atributos
     public String nombre;
     public int edad;

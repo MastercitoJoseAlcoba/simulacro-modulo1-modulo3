@@ -1,4 +1,4 @@
-package FIP_PRE_05_JMAC_2026_Guille;
+package Apoyo_Diciembre2026.VC4P4_POO_Ej_Dificultad_Examen;
 
 public class Pelicula {
 
