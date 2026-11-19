@@ -1,6 +1,6 @@
 # Ejercicio: clase Película
 
-Crea la clase `Pelicula` en el paquete `ej4` para representar una película.
+Crea la clase `Pelicula` en el paquete `VC4P4_POO_Ej_Dificultad_Examen` para representar una película.
 
 ## Atributos privados
 
