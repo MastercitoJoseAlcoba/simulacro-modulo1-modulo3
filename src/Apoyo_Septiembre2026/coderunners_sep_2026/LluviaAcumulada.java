@@ -10,7 +10,7 @@ public class LluviaAcumulada {
         // Creamos un vector donde vamos a guardar
         // la suma de cada columna de la matriz.
         //
-        // registros[0].length representa la cantidad
+        // Registros[0].length representa la cantidad
         // de columnas que tiene la matriz.
         //
         // Por ejemplo, si la matriz tiene 4 columnas,
@@ -64,7 +64,7 @@ public class LluviaAcumulada {
         }
 
 
-        // Finalmente devolvemos el vector con
+        // Finalmente, devolvemos el vector con
         // la lluvia acumulada de cada columna.
         return acumulados;
     }

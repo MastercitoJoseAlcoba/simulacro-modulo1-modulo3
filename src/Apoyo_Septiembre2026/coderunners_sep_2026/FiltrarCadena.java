@@ -50,7 +50,7 @@ public class FiltrarCadena {
                 // Si cumple ambas condiciones,
                 // agregamos la palabra a la lista resultado.
                 //
-                // Agregamos "palabra" y no "minuscula"
+                // Agregamos "palabra" y no "minúscula"
                 // para conservar exactamente cómo venía escrita
                 // originalmente.
                 resultado.add(palabra);

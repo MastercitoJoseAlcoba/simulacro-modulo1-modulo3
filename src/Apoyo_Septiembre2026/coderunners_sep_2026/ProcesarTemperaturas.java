@@ -67,7 +67,7 @@ public class ProcesarTemperaturas {
         }
 
 
-        // Finalmente devolvemos el nuevo array.
+        // Finalmente, devolvemos el nuevo array.
         return resultado;
     }
 }
