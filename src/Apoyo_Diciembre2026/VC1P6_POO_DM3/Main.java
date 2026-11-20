@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Autor: " + libro2.getAutor());
         System.out.println("Número de páginas: " + libro2.getNumeroPaginas());
 
-        Libro libro3 = new Libro();
+    Libro libro3 = new Libro();
         System.out.println("Título: " + libro3.getTitulo());
         System.out.println("Autor: " + libro3.getAutor());
         System.out.println("Número de páginas: " + libro3.getNumeroPaginas());
