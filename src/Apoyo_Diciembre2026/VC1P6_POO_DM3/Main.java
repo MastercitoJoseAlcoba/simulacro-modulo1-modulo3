@@ -17,5 +17,11 @@ public class Main {
         System.out.println("Título: " + libro3.getTitulo());
         System.out.println("Autor: " + libro3.getAutor());
         System.out.println("Número de páginas: " + libro3.getNumeroPaginas());
+
+        libro1.mostrarInformacion();
+        System.out.println();
+        libro2.mostrarInformacion();
+        System.out.println();
+        libro3.mostrarInformacion();
     }
 }
