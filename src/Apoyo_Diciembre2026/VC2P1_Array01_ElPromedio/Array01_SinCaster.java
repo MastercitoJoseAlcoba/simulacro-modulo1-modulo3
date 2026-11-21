@@ -1,6 +1,6 @@
-package Apoyo_Diciembre2026.VC2P1_Array01_AyandoElPromedio;
+package Apoyo_Diciembre2026.VC2P1_Array01_ElPromedio;
 
-public class Array01_ConCaster {
+public class Array01_SinCaster {
     public static void main(String[] args) {
         // Primer array
         int [] numero1 = {2, 4, 6, 8};
@@ -12,7 +12,7 @@ public class Array01_ConCaster {
     }
     public static double calcularPromedio(int[] array){
         // Inicializando las variables
-        int suma = 0; // Acumuladora
+        double suma = 0; // Acumuladora
         int cantidad = 0; // Contadora
 
         // Recorriendo el array
@@ -28,8 +28,7 @@ public class Array01_ConCaster {
             return 0;
         }
         // Calculando el promedio
-        return (double) suma / cantidad; // Casting para convertir la división a double
+        return suma / cantidad;
     }
 
 }
-

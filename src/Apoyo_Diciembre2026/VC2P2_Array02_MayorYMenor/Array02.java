@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC2P2_Array02_Ayando_MayorYMenor;
+package Apoyo_Diciembre2026.VC2P2_Array02_MayorYMenor;
 
 public class Array02 {
 
