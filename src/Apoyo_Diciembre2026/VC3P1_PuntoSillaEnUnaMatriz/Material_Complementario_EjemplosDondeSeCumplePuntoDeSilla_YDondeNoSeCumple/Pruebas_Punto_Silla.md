@@ -103,4 +103,4 @@ Para una matriz rectangular de n filas y m columnas:
 
 **Recordatorio:** i selecciona, j busca y k verifica.
 
-Guardá las tres imágenes JPG junto a este Markdown para verlas en Preview de IntelliJ.
+
