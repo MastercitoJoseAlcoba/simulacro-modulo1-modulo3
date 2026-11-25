@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC3P1_PuntoSillaEnUnaMatriz.Ej01;
+package Apoyo_Diciembre2026.VC3P1_PuntoSillaEnUnaMatriz.PuntoSillaEstricto;
 
 public class PuntoSillaMatriz {
     /*
