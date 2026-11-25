@@ -1,3 +1,5 @@
+package Apoyo_Diciembre2026.Feip_CodeRunner;
+
 public class Producto {
     private int id;
     private String nombre;

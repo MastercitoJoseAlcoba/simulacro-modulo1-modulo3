@@ -1,3 +1,5 @@
+package Apoyo_Diciembre2026.Feip_CodeRunner;
+
 public class OperacionesConArray {
     public double multiplicacionArray(double[] numeros) {
         double producto = 1.0;

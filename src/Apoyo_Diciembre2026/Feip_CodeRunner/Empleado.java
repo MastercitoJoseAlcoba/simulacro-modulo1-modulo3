@@ -1,3 +1,5 @@
+package Apoyo_Diciembre2026.Feip_CodeRunner;
+
 class Empleado {
     private String nombre;
     private String apellido;

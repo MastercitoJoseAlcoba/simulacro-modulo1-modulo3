@@ -1,3 +1,5 @@
+package Apoyo_Diciembre2026.Feip_CodeRunner;
+
 public class OperacionesConMatrices {
     public int sumaElementosMatriz(int[][] matriz) {
         int suma = 0;

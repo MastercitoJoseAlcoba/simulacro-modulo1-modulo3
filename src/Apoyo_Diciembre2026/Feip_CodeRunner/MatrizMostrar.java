@@ -1,3 +1,5 @@
+package Apoyo_Diciembre2026.Feip_CodeRunner;
+
 public class MatrizMostrar {
     public static void matrizMostrar(char[][] matriz) {
         int ultimo = matriz.length - 1;
