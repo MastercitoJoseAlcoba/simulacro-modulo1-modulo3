@@ -1,4 +1,4 @@
-# Ejercicio 5 — Punto silla estricto
+# Ejercicio 1 — Punto silla estricto
 
 Un punto silla estricto es el mínimo único de su fila y el máximo estricto de su columna. Los índices comienzan en 0.
 
