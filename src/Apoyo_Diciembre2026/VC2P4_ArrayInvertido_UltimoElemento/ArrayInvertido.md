@@ -1,6 +1,6 @@
 # Ejercicio — Invertir un array y hallar su último elemento
 
-Crea un método `invertirArray` que reciba un array de enteros y devuelva uno nuevo con los valores en orden inverso.
+Crea un método `Ej01_invertirArray` que reciba un array de enteros y devuelva uno nuevo con los valores en orden inverso.
 
 1. Usa un `for` para copiar los valores desde el final del array original.
 2. En el `main`, guarda el array invertido que devuelve el método.

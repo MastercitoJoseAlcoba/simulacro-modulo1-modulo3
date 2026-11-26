@@ -1,6 +1,6 @@
 # Ejercicio — Invertir un array recorriéndolo desde el final
 
-Implementa un método llamado `invertirArray` que reciba un array de enteros y devuelva un array nuevo con los elementos en orden inverso.
+Implementa un método llamado `Ej01_invertirArray` que reciba un array de enteros y devuelva un array nuevo con los elementos en orden inverso.
 
 ## Tu tarea
 
