@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma FEIP - Java</title>
+
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        h2 {
+            color: #94a3b8;
+        }
+
+        a {
+            display: block;
+            background: #1e293b;
+            color: white;
+            padding: 18px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Plataforma interactiva FEIP - Java</h1>
+
+<h2>Recordatorios visuales</h2>
+
+<div id="recordatorios"></div>
+
+<h2>Simuladores de examen</h2>
+
+<div id="simuladores"></div>
+
+<script>
+    const ruta = "src/Apoyo_Diciembre2026/";
+
+    const temas = [
+        ["Arrays invertidos", "Array_Invertido", "Array_Invertido"],
+        ["Matrices", "Matrices", "Matrices_Java"],
+        ["Punto silla", "Punto_Silla", "Punto_Silla_Java"],
+        ["Clases", "Clases", "Clases_Java"],
+        ["Pilas y colas", "Pilas_y_Colas", "Pilas_y_Colas_Java"],
+        ["Listas", "Listas", "Listas_Java"],
+        ["Map y HashMap", "Map_HashMap", "Map_HashMap_Java"],
+        ["Instanceof", "Instanceof", "Instanceof_Java"],
+        ["Herencia y polimorfismo", "Herencia_Polimorfismo", "Herencia_Polimorfismo_Java"],
+        ["Clases abstractas e interfaces", "Clases_Abstractas_Interfaces", "Clases_Abstractas_Interfaces_Java"]
+    ];
+
+    function agregarEnlace(contenedor, nombre, archivo) {
+        const enlace = document.createElement("a");
+
+        enlace.href = ruta + archivo;
+        enlace.textContent = nombre;
+        enlace.target = "_blank";
+        enlace.rel = "noopener";
+
+        document.getElementById(contenedor).appendChild(enlace);
+    }
+
+    temas.forEach(([nombre, carpeta, archivo]) => {
+        agregarEnlace(
+            "recordatorios",
+            nombre,
+            "Recordatorio_visual_interactivo_" +
+            carpeta + "_en_Java/Recordatorio_" +
+            archivo + ".html"
+        );
+    });
+
+    agregarEnlace("simuladores", "CodeRunner FEIP",
+        "Feip_CodeRunner/FEIP_CodeRunner_Interactivo.html");
+
+    agregarEnlace("simuladores", "Teórico FEIP",
+        "Feip_Teorico/FEIP_Teoricos_Interactivo.html");
+
+    const carpeta = "Recordatorio_Simulador_FEIP_visual_interactivo_en_Java/";
+
+    agregarEnlace("simuladores", "Devolución teórica - Parte 1",
+        carpeta + "Devolucion_Teorica_FEIP_Parte_1.html");
+
+    agregarEnlace("simuladores", "Devolución teórica - Parte 2",
+        carpeta + "Devolucion_Teorica_FEIP_Parte_2.html");
+
+    agregarEnlace("simuladores", "Parcial unificado - Parte 1",
+        carpeta + "Parcial_Unificado_FEIP_Parte_1.html");
+
+    agregarEnlace("simuladores", "Parcial unificado - Parte 2",
+        carpeta + "Parcial_Unificado_FEIP_Parte_2.html");
+
+    agregarEnlace("simuladores", "Simulador teórico completo",
+        "Recordatorio_Simulador_Teorico_FEIP_visual_interactivo_en_Java/Simulador_Teorico_FEIP_Java_Corregido.html");
+</script>
+
+</body>
+</html>
