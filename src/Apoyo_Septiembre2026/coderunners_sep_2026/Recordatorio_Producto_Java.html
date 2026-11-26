@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Producto · Java interactivo</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#111d31;--line:#2c3c55;--blue:#60a5fa;--cyan:#67e8f9;--green:#86efac;--red:#fca5a5;--muted:#aabbd0}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#e5edf7;font:16px/1.6 system-ui,sans-serif}main{max-width:1160px;margin:auto;padding:24px}h1{font-size:clamp(25px,4vw,40px);line-height:1.2;margin:12px 0}h2{font-size:20px;margin:0 0 14px}p{margin:8px 0}.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--cyan);font-weight:700}.muted,small{color:var(--muted)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px}.layout>.panel{margin:0}.fields{display:grid;gap:12px}label{display:block;font-size:13px;color:var(--muted)}input,select,button{font:inherit;border:1px solid #415673;border-radius:9px;padding:10px 13px;background:#0b1526;color:#f1f5f9}input:not([type=checkbox]),select{width:100%}input[type=checkbox]{accent-color:#60a5fa}button{cursor:pointer;font-weight:650}button:hover:not(:disabled){border-color:var(--cyan);background:#1b3552}button:disabled{opacity:.35;cursor:not-allowed}button.primary{background:#2563eb;border-color:#60a5fa;color:white}.controls{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:14px}.obj{border:1px solid #3b82f6;border-radius:12px;overflow:hidden;background:#0b1526}.obj h3{margin:0;background:#17365c;color:#bfdbfe;padding:12px 16px}.attr{padding:14px;display:grid;grid-template-columns:1fr;gap:4px;border-top:1px solid #263950}.attr strong{font:600 20px ui-monospace,monospace;overflow-wrap:anywhere}.attr.changed{background:#153d30;border-left:4px solid #4ade80}.attr code{color:#93c5fd;font-size:13px}.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.flow span{padding:6px 10px;border-radius:7px;background:#0d1728;border:1px solid var(--line);font-size:13px}.flow .current{background:#1e40af;border-color:#60a5fa}.status{padding:12px 15px;border-left:4px solid #60a5fa;background:#0c172a;border-radius:8px;min-height:78px}.checks{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.checks span{font:14px ui-monospace,monospace;border:1px solid var(--line);padding:8px;border-radius:8px}.good{color:var(--green)}.bad{color:var(--red)}pre{background:#080f1c;padding:15px;border:1px solid var(--line);border-radius:10px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 ui-monospace,Consolas,monospace;margin:10px 0;min-height:48px}.code .kw{color:#c4b5fd}.code .str{color:#a7f3d0}.code .com{color:#819e86}.code .num{color:#fdba74}.code .method{color:#7dd3fc}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted)}tr.active{background:#17365c}details summary{cursor:pointer;font-weight:700;color:var(--blue)}.hidden,[hidden]{display:none!important}.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{padding:12px;background:#0b1526;border-radius:10px;border:1px solid var(--line);overflow-wrap:anywhere}#feedback{min-height:20px;color:var(--green)}@media(max-width:760px){main{padding:14px}.layout,.split{grid-template-columns:1fr}.panel{padding:14px}}
+</style></head><body><main>
+<div class="tag">FEIP · Programación orientada a objetos</div><h1>Producto: constructores, getters y setters</h1><p class="muted">Explorá cómo se crea un objeto, cómo <code>this()</code> reutiliza el constructor y cómo las validaciones protegen los atributos privados.</p>
+<div class="panel"><h2>1. Elegí una operación</h2><div class="layout"><div class="fields"><label>Operación<select id="op"><optgroup label="Constructores"><option value="c0">new Producto()</option><option value="c2">new Producto(nombre, categoria)</option><option value="c3" selected>new Producto(nombre, categoria, stock)</option></optgroup><optgroup label="Setters"><option value="sn">setNombre(String)</option><option value="sc">setCategoria(String)</option><option value="ss">setStock(int)</option></optgroup><optgroup label="Getters y void"><option value="gn">getNombre()</option><option value="gc">getCategoria()</option><option value="gs">getStock()</option><option value="show">mostrar()</option></optgroup></select></label>
+<div id="nf"><label>Nombre (String)<input id="nombre" value="Mouse"></label><label><input id="nn" type="checkbox"> Enviar null</label></div><div id="cf"><label>Categoría (String)<input id="categoria" value="Informática"></label><label><input id="cn" type="checkbox"> Enviar null</label></div><div id="sf"><label>Stock (int)<input id="stock" type="number" step="1" value="15"></label></div>
+<div class="controls"><button class="primary" id="prepare">Preparar operación</button><button id="reset">Reiniciar todo</button></div><small>Preparar no cambia el objeto. Avanzá para ejecutar cada instrucción. Al terminar, podés encadenar otra operación.</small><p id="error" class="bad" role="alert"></p></div>
+<div><h2>Objeto actual</h2><div class="obj"><h3>Producto <small>· atributos privados</small></h3><div id="attributes"></div></div><div class="controls"><button id="valid">Ejemplo válido</button><button id="invalid">Ejemplo inválido</button><button id="nullcase">Ejemplo null / vacío</button></div></div></div></div>
+<div class="panel"><h2>2. Ejecución paso a paso</h2><div class="flow" id="flow"></div><div id="status" class="status" aria-live="polite"></div><div id="checks" class="checks"></div><pre id="instruction" class="code"></pre><div class="controls"><button id="prev">← Anterior</button><button class="primary" id="next">Siguiente →</button><button id="finish">Ejecutar todo</button><button id="restart">Volver al inicio</button><span id="counter" class="muted"></span></div></div>
+<div class="layout"><div class="panel"><h2>3. Antes y después</h2><div class="split"><div class="mini"><small>Antes de la instrucción</small><pre id="before"></pre></div><div class="mini"><small>Después de la instrucción</small><pre id="after"></pre></div></div><small>Los setters no devuelven nada: cambian (o conservan) el atributo.</small></div><div class="panel"><h2>4. Retorno y consola</h2><small>Valor retornado por el método</small><pre id="ret"></pre><small>Salida de System.out.println()</small><pre id="console"></pre><small>Un getter devuelve un valor, pero no lo imprime automáticamente.</small></div></div>
+<div class="panel"><h2>5. Traza de escritorio</h2><div class="tablewrap"><table><thead><tr><th>Paso</th><th>Instrucción</th><th>nombre</th><th>categoría</th><th>stock</th></tr></thead><tbody id="trace"></tbody></table></div></div>
+<div class="panel"><h2>6. Código Java a color</h2><div class="controls"><button id="copyMethod">Copiar método seleccionado</button><button id="copyClass">Copiar clase completa</button></div><div id="feedback" role="status"></div><pre class="code" id="methodCode"></pre><details><summary>Ver clase Producto completa y comentada</summary><pre class="code" id="fullCode"></pre></details><details><summary>Ejemplo para probar en main</summary><pre class="code" id="mainCode"></pre></details></div>
+<div class="panel"><h2>Recordatorio para el examen</h2><p><code>this()</code> llama a otro constructor de la misma clase. En estos constructores se ejecuta primero.</p><p><code>this.nombre = nombre;</code> distingue el atributo del parámetro. <code>trim()</code> se usa para validar, pero se guarda el texto original, sin recortarlo.</p><p><code>&amp;&amp;</code> evalúa de izquierda a derecha; si la primera condición es falsa, no evalúa la segunda. Así se evita llamar a <code>trim()</code> sobre <code>null</code>.</p><p><code>void</code> no retorna un valor; <code>String</code> e <code>int</code> sí. <code>mostrar()</code> imprime tres líneas.</p></div><p class="muted">Simulación didáctica en JavaScript · No requiere Internet ni un compilador Java.</p></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), defaults=()=>({nombre:'Producto sin nombre',categoria:'Categoría sin definir',stock:0}), clone=o=>o===null?null:{...o}, repr=v=>typeof v==='string'?JSON.stringify(v):String(v), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const methods={c0:`// Constructor sin parámetros: valores por defecto.
+public Producto() {
+    this.nombre = "Producto sin nombre";
+    this.categoria = "Categoría sin definir";
+    this.stock = 0;
+}`,c2:`// Constructor con nombre y categoría.
+public Producto(String nombre, String categoria) {
+    // Inicializamos con los valores por defecto.
+    this();
+    // Reutilizamos las validaciones de los setters.
+    setNombre(nombre);
+    setCategoria(categoria);
+}`,c3:`// Constructor con los tres parámetros.
+public Producto(String nombre, String categoria, int stock) {
+    // Primero llamamos al constructor sin parámetros.
+    this();
+    // Usamos los setters para validar los datos recibidos.
+    setNombre(nombre);
+    setCategoria(categoria);
+    setStock(stock);
+}`,gn:`// Devuelve el nombre del producto.
+public String getNombre() {
+    return nombre;
+}`,gc:`// Devuelve la categoría del producto.
+public String getCategoria() {
+    return categoria;
+}`,gs:`// Devuelve el stock disponible.
+public int getStock() {
+    return stock;
+}`,sn:`// Validamos que el nombre no sea null ni esté vacío.
+public void setNombre(String nombre) {
+    if (nombre != null && !nombre.trim().isEmpty()) {
+        // Conservamos el texto original.
+        this.nombre = nombre;
+    }
+}`,sc:`// Validamos que la categoría no sea null ni esté vacía.
+public void setCategoria(String categoria) {
+    if (categoria != null && !categoria.trim().isEmpty()) {
+        this.categoria = categoria;
+    }
+}`,ss:`// No permitimos stock negativo.
+public void setStock(int stock) {
+    if (stock >= 0) {
+        this.stock = stock;
+    }
+}`,show:`// Procedimiento void: imprime los atributos.
+public void mostrar() {
+    System.out.println("Producto: " + nombre);
+    System.out.println("Categoría: " + categoria);
+    System.out.println("Stock disponible: " + stock);
+}`};
+const full=`package Apoyo_Septiembre2026.coderunners_sep_2026;\n\npublic class Producto {\n\n    // Atributos privados: encapsulamiento.\n    private String nombre;\n    private String categoria;\n    private int stock;\n\n`+Object.values(methods).map(s=>s.split('\n').map(l=>'    '+l).join('\n')).join('\n\n')+'\n}\n';
+const example=`// Dentro de un main de otra clase del mismo package.
+Producto producto = new Producto("Mouse", "Informática", 15);
+producto.mostrar();
+// El stock negativo no modifica el atributo.
+producto.setStock(-5);
+System.out.println(producto.getStock()); // 15`;
+function highlight(s){return String(s).split(/(\/\/[^\n]*|"(?:\\.|[^"\\])*"|\b(?:public|private|class|package|int|void|String|return|if|new|this|null|true|false)\b|\b\d+\b|\b\w+(?=\())/g).map((t,i)=>{if(i%2===0)return esc(t);let cls=t.startsWith('//')?'com':t.startsWith('"')?'str':/^\d+$/.test(t)?'num':/^(public|private|class|package|int|void|String|return|if|new|this|null|true|false)$/.test(t)?'kw':'method';return `<span class="${cls}">${esc(t)}</span>`}).join('')}
+// Java String.trim() removes characters <= U+0020, unlike JavaScript trim().
+const javaTrim=s=>s.replace(/^[\x00-\x20]+|[\x00-\x20]+$/g,'');
+function simulate(op, args, initial){let o=clone(initial),steps=[],output=[],ret='—';const add=(phase,code,desc,action,checks=[])=>{const before=clone(o);if(action)action();steps.push({phase,code,desc,before,after:clone(o),checks,output:[...output],ret})};
+const set=(key,val)=>{const cap=key==='nombre'?'Nombre':key==='categoria'?'Categoria':'Stock',method='set'+cap;add(method,`${method}(${repr(val)});`,'El parámetro recibido es '+repr(val)+'.');let ok,checks;if(key==='stock'){ok=val>=0;checks=[[`${val} >= 0`,ok]]}else{const nonNull=val!==null;ok=nonNull&&javaTrim(val).length>0;checks=[[`${key} != null`,nonNull],[`!${key}.trim().isEmpty()`,nonNull?javaTrim(val).length>0:null]]}add(method,key==='stock'?'if (stock >= 0) {':`if (${key} != null && !${key}.trim().isEmpty()) {`,ok?'La condición es verdadera: podemos modificar el atributo.':'La condición es falsa: no se modifica el atributo.',null,checks);if(ok)add(method,`this.${key} = ${key};`,'Guardamos el valor original en el atributo privado.',()=>{o[key]=val});else add(method,'// No se ejecuta la asignación.','El atributo conserva su valor anterior.');};
+const construct=op.startsWith('c');const call=construct?`new Producto(${op==='c0'?'':repr(args.nombre)+', '+repr(args.categoria)+(op==='c3'?', '+args.stock:'')});`:op==='sn'?`producto.setNombre(${repr(args.nombre)});`:op==='sc'?`producto.setCategoria(${repr(args.categoria)});`:op==='ss'?`producto.setStock(${args.stock});`:`producto.${{gn:'getNombre',gc:'getCategoria',gs:'getStock',show:'mostrar'}[op]}();`;
+add('Inicio',call,'Preparados para ejecutar. Avanzá al siguiente paso.');
+if(construct){add('Constructor',op==='c0'?'public Producto() {':'this();',op==='c0'?'Se crea una instancia nueva.':'Se invoca el constructor sin parámetros de esta misma clase.',()=>{o={nombre:null,categoria:null,stock:0}});for(const [k,v] of Object.entries(defaults()))add('Valores por defecto',`this.${k} = ${repr(v)};`,'Inicializamos '+k+' con el valor por defecto.',()=>{o[k]=v});if(op!=='c0'){set('nombre',args.nombre);set('categoria',args.categoria);if(op==='c3')set('stock',args.stock)}add('Fin','// Constructor finalizado.','El objeto nuevo queda disponible. Un constructor no declara tipo de retorno.');}
+else if(op==='sn'||op==='sc'||op==='ss'){const k={sn:'nombre',sc:'categoria',ss:'stock'}[op];set(k,args[k]);add('Fin','// Fin del método void.','El setter terminó sin retornar un valor.',()=>{ret='void — sin valor de retorno'});}
+else if(op==='show'){for(const [label,k] of [['Producto: ','nombre'],['Categoría: ','categoria'],['Stock disponible: ','stock']])add('mostrar()',`System.out.println(${repr(label)} + ${k});`,'Imprimimos el atributo en la consola.',()=>output.push(label+o[k]));add('Fin','// Fin del método void.','mostrar() no devuelve un valor.',()=>{ret='void — sin valor de retorno'});}
+else {const k={gn:'nombre',gc:'categoria',gs:'stock'}[op];add('Return',`return ${k};`,'El getter devuelve el valor del atributo sin modificarlo.',()=>{ret=repr(o[k])});add('Fin','// Fin del método.','El valor retornado está disponible para quien llamó al método.');}return steps}
+let current=defaults(),steps=[],idx=0,active='c3';
+function args(){let op=$('op').value, stock=$('stock').value; if(['c3','ss'].includes(op)&&(!/^[+-]?\d+$/.test(stock)||!Number.isInteger(Number(stock))||Number(stock)<-2147483648||Number(stock)>2147483647))throw Error('Ingresá un entero válido de Java (int).');return {nombre:$('nn').checked?null:$('nombre').value,categoria:$('cn').checked?null:$('categoria').value,stock:Number(stock)}}
+function fields(){let v=$('op').value;$('nf').hidden=!['c2','c3','sn'].includes(v);$('cf').hidden=!['c2','c3','sc'].includes(v);$('sf').hidden=!['c3','ss'].includes(v);$('nombre').disabled=$('nn').checked;$('categoria').disabled=$('cn').checked;}
+function prepare(){try{let a=args();active=$('op').value;steps=simulate(active,a,current);idx=0;$('error').textContent='';render()}catch(e){$('error').textContent=e.message}}
+function objText(o){return o?`nombre = ${repr(o.nombre)}\ncategoria = ${repr(o.categoria)}\nstock = ${o.stock}`:'Sin objeto'}
+function render(){let s=steps[idx];current=clone(s.after);$('attributes').innerHTML=Object.entries(s.after).map(([k,v])=>`<div class="attr ${s.before&&s.before[k]!==v?'changed':''}"><code>private ${k==='stock'?'int':'String'} ${k}</code><strong>${esc(repr(v))}</strong></div>`).join('');let phases=[...new Set(steps.map(s=>s.phase))];$('flow').innerHTML=phases.map(p=>`<span class="${p===s.phase?'current':''}">${esc(p)}</span>`).join(' → ');$('status').textContent=s.desc;$('instruction').innerHTML=highlight(s.code);$('checks').innerHTML=s.checks.map(([c,v])=>`<span class="${v===null?'muted':v?'good':'bad'}">${esc(c)} → ${v===null?'No evaluada':v}</span>`).join('');$('before').textContent=objText(s.before);$('after').textContent=objText(s.after);$('ret').textContent=s.ret;$('console').textContent=s.output.join('\n')||'Sin salida todavía.';$('counter').textContent=`Paso ${idx} / ${steps.length-1}`;$('prev').disabled=idx===0;$('next').disabled=idx===steps.length-1;$('finish').disabled=idx===steps.length-1;$('trace').innerHTML=steps.slice(0,idx+1).map((t,i)=>`<tr class="${i===idx?'active':''}"><td>${i}</td><td><code>${esc(t.code)}</code></td><td>${esc(repr(t.after.nombre))}</td><td>${esc(repr(t.after.categoria))}</td><td>${t.after.stock}</td></tr>`).join('');$('methodCode').innerHTML=highlight(methods[active]);}
+function preset(kind){$('op').value='c3';$('nombre').value=kind==='valid'?'Mouse':kind==='invalid'?'   ':'Mouse';$('categoria').value=kind==='valid'?'Informática':kind==='invalid'?'   ':'';$('stock').value=kind==='valid'?'15':'-5';$('nn').checked=kind==='null';$('cn').checked=false;fields();prepare()}
+function move(n){idx=Math.min(steps.length-1,Math.max(0,n));render()}
+async function copy(s){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(s)}else{let t=document.createElement('textarea');t.value=s;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error();t.remove()}$('feedback').textContent='Código copiado.'}catch(e){$('feedback').textContent='No se pudo copiar automáticamente. Seleccioná el código y usá Ctrl+C.'}}
+$('op').onchange=fields;$('nn').onchange=fields;$('cn').onchange=fields;$('prepare').onclick=prepare;$('prev').onclick=()=>move(idx-1);$('next').onclick=()=>move(idx+1);$('finish').onclick=()=>move(steps.length-1);$('restart').onclick=()=>move(0);$('reset').onclick=()=>{current=defaults();preset('valid')};$('valid').onclick=()=>preset('valid');$('invalid').onclick=()=>preset('invalid');$('nullcase').onclick=()=>preset('null');$('copyClass').onclick=()=>copy(full);$('copyMethod').onclick=()=>copy(methods[active]);$('fullCode').innerHTML=highlight(full);$('mainCode').innerHTML=highlight(example);fields();prepare();
+</script></body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Procesar temperaturas · Índice inverso · Java</title><style>
+:root{color-scheme:dark;--bg:#20282f;--panel:#343d40;--muted:#b7b5a6;--text:#f5eee0;--blue:#397af8;--cyan:#38bdf8;--green:#23c36b;--edge:#596469}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px}h1{font-size:clamp(24px,4vw,32px);line-height:1.2;margin:12px 0 20px}h2{font-size:20px;margin:0 0 12px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase}.card{background:var(--panel);border:1px solid var(--edge);border-radius:18px;padding:20px;margin:16px 0}.muted,small{color:var(--muted)}.inputs,.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.inputs input{flex:1;min-width:180px;background:#20282f;border:1px solid #78858a;border-radius:8px;padding:12px;color:white;font:inherit}button{font:inherit;font-weight:650;border:1px solid #65747c;border-radius:9px;padding:10px 16px;background:#29343b;color:white;cursor:pointer}button.primary{background:#2459d8;border-color:#5389ff}button:hover:not(:disabled){filter:brightness(1.2)}button:disabled{opacity:.4;cursor:default}button:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.diagram{width:100%;display:block;margin:auto;max-width:850px}.diagram text{font-family:system-ui,sans-serif}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.metric{background:#232b30;border-radius:12px;padding:16px}.metric strong{font-size:34px;display:block;line-height:1.3}.metric:first-child strong{color:#76a3ff}.metric:last-child strong{color:#8beaab}.metric small{display:block}.progress{flex:1;min-width:110px;text-align:center;font-weight:600}.bar{height:6px;background:#535d62;border-radius:10px;overflow:hidden;margin:14px 0}.bar span{display:block;height:100%;background:var(--cyan);transition:width .2s}.code{background:#111a27;color:#e2e8f0;border:1px solid #455464;border-radius:10px;padding:16px;overflow:auto;font:14px/1.65 ui-monospace,Consolas,monospace;white-space:pre;tab-size:4}.comment{color:#86efac}.keyword{color:#c4b5fd}.number{color:#fbbf77}.line{display:block;min-height:1.65em}.line.active{background:#263d61;box-shadow:inset 3px 0 #38bdf8}.lineNo{display:inline-block;width:2.5em;color:#8391a4;user-select:none}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}td,th{text-align:left;padding:10px 8px;border-bottom:1px solid #596469}th{color:var(--muted);font-size:13px}tr.current{background:#24456a}tr.future{color:#c1c4c5}tr.done td:last-child{color:#9cebb4}.tableWrap{overflow:auto}.between{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.error{color:#ffc1b8;min-height:1.5em}.output{color:#9cebb4;font-weight:bold;overflow-wrap:anywhere}footer{color:var(--muted);font-size:13px;text-align:center;padding:12px} @media(max-width:540px){main{padding:12px}.card{padding:12px}.metric{padding:10px}.metric strong{font-size:27px}.controls button{padding:10px}.code{font-size:12px}td,th{padding:7px 5px}}
+</style></head><body><main><div class="eyebrow">FEIP · Java · Arrays invertidos</div><h1>Recordatorio visual de tu código</h1><p class="muted">Convertimos de Celsius a Fahrenheit usando un único índice i que avanza desde 0. La expresión temperaturas.length - 1 - i permite leer desde el final.</p>
+<section class="card"><label for="valores"><b>Temperaturas originales (°C)</b></label><div class="inputs" style="margin-top:8px"><input id="valores" value="30, 25, 20, 15, 10" autocomplete="off" spellcheck="false"><button id="aplicar" class="primary">Aplicar valores</button><button id="ejemplo">Ejemplo original</button></div><small>Hasta 10 enteros separados por comas. Dejá el campo vacío para probar un array vacío.</small><div id="error" class="error" role="alert"></div></section>
+<section class="card"><svg id="diagrama" class="diagram" role="img" aria-label="Recorrido de temperaturas desde el final hacia el principio"></svg><div class="metrics"><div class="metric"><small>Índice de lectura</small><strong id="indice">—</strong><small>temperaturas.length - 1 - i</small></div><div class="metric"><small>Índice de destino: i</small><strong id="destino">0</strong><small>Avanza con i++</small></div></div><div id="detalle" class="code" aria-live="polite"></div><div class="bar"><span id="barra"></span></div><div class="controls"><button id="anterior">← Anterior</button><span class="progress" id="progreso"></span><button id="siguiente" class="primary">Siguiente →</button><button id="reiniciar">↻ Reiniciar</button></div><p class="muted" id="estado" aria-live="polite"></p></section>
+<section class="card"><h2>Traza de escritorio</h2><div class="tableWrap"><table><thead><tr><th>i (destino)</th><th>Índice inverso</th><th>Celsius</th><th>Fahrenheit</th><th>Resultado parcial</th></tr></thead><tbody id="traza"></tbody></table></div><p>Array resultado: <span id="salida" class="output"></span></p><small>Las posiciones aún no escritas tienen el valor inicial 0 de Java. La fórmula usa división entera; los decimales se truncan hacia cero.</small></section>
+<section class="card"><div class="between"><h2>Método Java comentado</h2><div><button id="copiar">Copiar método</button> <button id="copiarMain">Copiar clase completa</button></div></div><div id="codigo" class="code"></div><p id="copiaEstado" aria-live="polite" class="muted"></p><small>Complejidad temporal O(n) · Espacial O(n) por el nuevo array.</small></section><footer>Java · Práctica de arrays · HTML autónomo sin dependencias externas</footer></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const original=[30,25,20,15,10];let datos=original.slice(),paso=-1;
+// Reproduce las operaciones int de Java, incluido el desbordamiento.
+const convertir=c=>((Math.trunc(Math.imul(c,9)/5)+32)|0);
+const metodo=`public int[] procesarTemperaturas(int[] temperaturas) {
+    // Creamos un array del mismo tamaño que el original.
+    int[] resultado = new int[temperaturas.length];
+
+    // i avanza desde 0 hasta el último índice del resultado.
+    for (int i = 0; i < temperaturas.length; i++) {
+
+        // length - 1 indica el último índice del array original.
+        // Restar i permite retroceder en cada iteración.
+        int temperatura = temperaturas[temperaturas.length - 1 - i];
+
+        // Convertimos de Celsius a Fahrenheit y guardamos en i.
+        // La división es entera porque trabajamos con int.
+        resultado[i] = temperatura * 9 / 5 + 32;
+    }
+
+    // Devolvemos el array completo fuera del for.
+    return resultado;
+}`;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function color(line){if(line.trim().startsWith('//'))return '<span class="comment">'+esc(line)+'</span>';return esc(line).replace(/\b(public|static|int|for|new|return|void|class)\b/g,'<span class="keyword">$1</span>').replace(/\b(\d+)\b/g,'<span class="number">$1</span>');}
+function render(){
+ const n=datos.length, activo=paso>=0&&paso<n, inverso=n-1-paso;
+ const resultado=Array.from({length:n},(_,j)=>j<=paso?convertir(datos[n-1-j]):0);
+ const W=Math.max(700,n*115+36),h=430,pad=22,gap=9,cw=n?(W-2*pad-(n-1)*gap)/n:0;
+ const x=j=>pad+j*(cw+gap),cx=j=>x(j)+cw/2;
+ const f=(t,xx,yy,size,fill,weight=400)=>`<text x="${xx}" y="${yy}" fill="${fill}" font-size="${size}" font-weight="${weight}" text-anchor="middle">${esc(t)}</text>`;
+ let svg=`<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9" fill="none" stroke="#38bdf8" stroke-width="1.5"/></marker></defs>`;
+ svg+=f('Array original — Celsius',W/2,34,24,'#f5eee0',700);
+ if(!n){svg+=f('Array vacío: no se ejecuta el for',W/2,175,24,'#f5eee0',600)+f('Resultado: []',W/2,270,23,'#9cebb4',600);}
+ else{
+ for(let j=0;j<n;j++){
+ const selected=activo&&j===inverso,written=j<=paso;
+ svg+=f('['+j+']',cx(j),74,20,'#c9c5b7');
+ svg+=`<rect x="${x(j)}" y="88" width="${cw}" height="76" rx="12" fill="${selected?'#2459d8':'#3e4951'}" stroke="#397af8" stroke-width="2"/>`;
+ svg+=f(datos[j],cx(j),137,Math.min(33,cw/(String(datos[j]).length*.7)),'#f8fafc',700);
+ svg+=`<rect x="${x(j)}" y="302" width="${cw}" height="76" rx="12" fill="${written?'#294c3e':'#3c4447'}" stroke="${written?'#22c55e':'#687276'}" stroke-width="2"/>`;
+ svg+=f(resultado[j],cx(j),351,Math.min(33,cw/(String(resultado[j]).length*.7)),written?'#d7fbe3':'#d0cec3',700);
+ svg+=f('['+j+']',cx(j),403,20,'#c9c5b7');
+ }
+ if(activo)svg+=`<path d="M ${cx(inverso)} 174 C ${cx(inverso)} 245, ${cx(paso)} 221, ${cx(paso)} 288" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#arrow)"/>`;
+ svg+=`<rect x="${W/2-133}" y="211" width="266" height="48" rx="11" fill="#254bb4"/>`+f('C × 9 / 5 + 32',W/2,242,22,'#fff',600);
+ svg+=f('Array resultado — Fahrenheit',W/2,291,15,'#b4e9c6',600);
+ }
+ $('diagrama').setAttribute('viewBox',`0 0 ${W} ${h}`);$('diagrama').innerHTML=svg;
+ $('diagrama').setAttribute('aria-label',activo?`Lectura del índice ${inverso}, escritura en ${paso}, resultado ${resultado.join(', ')}`:'Estado inicial del array resultado');
+ $('indice').textContent=activo?inverso:'—';$('destino').textContent=activo?paso:n?0:'—';
+ $('detalle').innerHTML=activo?`<span class="comment">// Calculamos el índice de lectura</span>
+${n} - 1 - ${paso} = ${inverso}
+int temperatura = temperaturas[${inverso}]; // ${datos[inverso]} °C
+<span class="comment">// Aplicamos la fórmula y guardamos</span>
+resultado[${paso}] = ${datos[inverso]} * 9 / 5 + 32;
+resultado[${paso}] = ${resultado[paso]};${paso===n-1?'\n<span class="comment">// Fin del for: return resultado;</span>':''}`:n?'<span class="comment">// Creamos el array resultado: todos los valores comienzan en 0.</span>\nint[] resultado = new int[temperaturas.length];':'<span class="comment">// El array está vacío: no hay iteraciones.</span>\nreturn resultado; // []';
+ $('progreso').textContent=paso<0?'Inicio · 0 de '+n:`Paso ${paso+1} de ${n}`;
+ $('barra').style.width=(n?(paso+1)/n*100:100)+'%';$('anterior').disabled=paso<0;$('siguiente').disabled=!n||paso>=n-1;
+ $('estado').textContent=!n?'Sin iteraciones; se retorna un array vacío.':paso===n-1?'Recorrido completo. Se ejecuta return resultado.':paso<0?'Array resultado inicializado. Pulsá Siguiente para ejecutar la primera vuelta.':'i aumenta y el índice de lectura disminuye en cada vuelta del for.';
+ $('salida').textContent='['+resultado.join(', ')+']';
+ $('traza').innerHTML=datos.slice().reverse().map((c,j)=>`<tr class="${j===paso?'current':j<paso?'done':'future'}"><td>${j}</td><td>${n-1-j}</td><td>${j<=paso?c:'—'}</td><td>${j<=paso?convertir(c):'—'}</td><td>${j<=paso?'['+Array.from({length:n},(_,k)=>k<=j?convertir(datos[n-1-k]):0).join(', ')+']':'Pendiente'}</td></tr>`).join('');
+ $('codigo').innerHTML=metodo.split('\n').map((l,j)=>`<span class="line ${activo&&[5,9,13].includes(j)||!activo&&n&&j===2||paso===n-1&&j===17?'active':''}"><span class="lineNo">${j+1}</span>${color(l)}</span>`).join('');
+}
+function aplicar(){const v=$('valores').value.trim();const tokens=v?v.split(',').map(s=>s.trim()):[];if(tokens.length>10||tokens.some(s=>!/^[-+]?\d+$/.test(s)||Number(s)<-2147483648||Number(s)>2147483647)){ $('error').textContent='Ingresá hasta 10 enteros válidos de Java, separados por comas.';return;}datos=tokens.map(Number);paso=-1;$('error').textContent='';render();}
+$('aplicar').onclick=aplicar;$('valores').addEventListener('keydown',e=>{if(e.key==='Enter')aplicar()});$('ejemplo').onclick=()=>{$('valores').value=original.join(', ');aplicar()};$('anterior').onclick=()=>{if(paso>=0){paso--;render()}};$('siguiente').onclick=()=>{if(paso<datos.length-1){paso++;render()}};$('reiniciar').onclick=()=>{paso=-1;$('error').textContent='';render()};
+async function copiar(texto){try{if(!navigator.clipboard)throw Error('clipboard');await navigator.clipboard.writeText(texto);$('copiaEstado').textContent='Código copiado.'}catch{const t=document.createElement('textarea');t.value=texto;document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch{}t.remove();$('copiaEstado').textContent=ok?'Código copiado.':'No se pudo copiar automáticamente. Seleccioná el código y usá Ctrl+C.';}}
+$('copiar').onclick=()=>copiar(metodo);$('copiarMain').onclick=()=>copiar('import java.util.Arrays;\n\npublic class ProcesarTemperaturas {\n    public static void main(String[] args) {\n        int[] temperaturas = {'+datos.join(', ')+'};\n        int[] resultado = new ProcesarTemperaturas().procesarTemperaturas(temperaturas);\n        System.out.println(Arrays.toString(resultado));\n    }\n\n'+metodo.split('\n').map(l=>'    '+l).join('\n')+'\n}');render();
+</script></body></html>
