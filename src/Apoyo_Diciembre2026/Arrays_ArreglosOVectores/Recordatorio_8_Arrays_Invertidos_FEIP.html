@@ -1,0 +1,110 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8 Arrays invertidos · FEIP</title><style>
+*{box-sizing:border-box}body{margin:0;background:#0f172a;color:#e2e8f0;font:16px system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:24px}h1,h2{color:#7dd3fc}h1{margin:0 0 8px;font-size:clamp(24px,4vw,36px)}h2{font-size:19px;margin:0 0 14px}.muted,small{color:#94a3b8}section{background:#1e293b;border:1px solid #334155;border-radius:15px;padding:20px;margin:16px 0}.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}button,input,select{font:inherit;border:1px solid #475569;border-radius:8px;padding:10px 13px;background:#0f172a;color:#f8fafc}button{cursor:pointer}button:hover:not(:disabled),button.active{background:#1d4ed8;border-color:#60a5fa}button:disabled{opacity:.35;cursor:default}button.primary{background:#2563eb;border-color:#60a5fa}input{width:100%}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row input{flex:1;min-width:160px}.spread{justify-content:space-between}.cells{display:flex;flex-wrap:wrap;gap:9px;min-height:68px;align-items:center}.cell{min-width:58px;text-align:center;display:grid;gap:4px}.cell strong{display:grid;place-items:center;min-height:44px;padding:6px 9px;border:1px solid #475569;border-radius:7px;background:#0f172a;font: bold 19px monospace}.cell.read strong{background:#1d4ed8;border-color:#7dd3fc}.cell.compare strong{background:#7c3aed;border-color:#c4b5fd}.cell.written strong{background:#14532d;border-color:#4ade80}.cell.write strong{outline:2px solid #4ade80}.arrow{color:#7dd3fc;font: bold 17px monospace;text-align:center;padding:14px;white-space:pre-wrap}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}.metric{background:#0f172a;padding:12px;border-radius:9px}.metric b{display:block;color:#7dd3fc;font: bold 21px monospace;overflow-wrap:anywhere}.code{background:#080f1e;border:1px solid #334155;border-radius:9px;padding:12px;overflow:auto;font:14px/1.65 ui-monospace,Consolas,monospace;white-space:pre}.line{display:block;min-height:1.65em}.line.on{background:#1e3a5f;box-shadow:inset 3px 0 #38bdf8}.ln{display:inline-block;width:3ch;color:#64748b;user-select:none}.kw{color:#c4b5fd}.num{color:#fbbf24}.comment{color:#86efac}.str{color:#fda4af}.output{color:#86efac;font:bold 19px monospace;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #334155;text-align:left;padding:9px}tr.on{background:#1e3a5f}td{overflow-wrap:anywhere}#error{color:#fca5a5}progress{width:100%;height:9px;accent-color:#38bdf8}.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.layout section{margin:0}@media(max-width:760px){main{padding:12px}.layout{grid-template-columns:1fr}section{padding:14px}}footer{text-align:center;padding:20px;color:#94a3b8}
+</style></head><body><main><h1>Arrays invertidos en Java</h1><p class="muted">8 ejercicios FEIP · Simulador paso a paso · CodeRunner</p><section><h2>Seleccioná un ejercicio</h2><div class="tabs" id="tabs"></div></section><section><h2 id="title"></h2><p id="desc"></p><label for="input">Array de entrada (enteros separados por coma; [] para vacío)</label><div class="row"><input id="input" value="1, 2, 3, 4"><button id="apply" class="primary">Aplicar array</button></div><p id="error" role="alert"></p><div class="row"><label for="tests">Casos de prueba:</label><select id="tests"></select><button id="load">Cargar prueba</button></div></section><section><div class="row spread"><h2 id="phase">Estado inicial</h2><span id="step"></span></div><progress id="progress" max="1" value="0"></progress><p>Array original</p><div id="original" class="cells"></div><div id="arrow" class="arrow"></div><p id="destLabel">Array resultado</p><div id="dest" class="cells"></div><div id="metrics" class="metrics"></div><p id="explain"></p><div class="row"><button id="prev">← Anterior</button><button id="next" class="primary">Siguiente →</button><button id="reset">↻ Reiniciar</button><button id="end">Ir al return</button></div><p class="muted">Valor retornado</p><div id="output" class="output">Pendiente</div></section><div class="layout"><section><div class="row spread"><h2>Código Java</h2><button id="copy">Copiar método</button></div><div id="code" class="code"></div><p id="copyStatus" class="muted" aria-live="polite"></p></section><section><h2>Traza de escritorio</h2><div style="overflow:auto;max-height:550px"><table><thead><tr><th>Paso</th><th>Acción</th><th>Índices / valor</th></tr></thead><tbody id="trace"></tbody></table></div></section></div><section><h2>Reglas rápidas para FEIP</h2><p><code>arreglo.length - 1 - i</code>: leemos desde el final mientras <code>i</code> avanza.</p><p><code>for (int i = arreglo.length - 1; i &gt;= 0; i--)</code>: recorremos directamente desde el final.</p><p>En búsquedas, el <code>return</code> dentro del <code>if</code> termina el método. Si construimos un array completo, lo retornamos fuera del <code>for</code>.</p></section><footer>Apoyo Diciembre 2026 · Java · Simulación, no compilador Java</footer></main><script>
+const E=[
+{title:'Invertir un array',desc:'Devuelve un nuevo array en orden inverso.',name:'invertirArray',tests:[[[1,2,3,4],[4,3,2,1]],[[10,20,30],[30,20,10]],[[5],[5]],[[],[]]],code:`public int[] invertirArray(int[] arreglo) {
+    // Creamos el array resultado
+    int[] resultado = new int[arreglo.length];
+    for (int i = 0; i < arreglo.length; i++) {
+        // Leemos desde el final y guardamos desde el inicio
+        resultado[i] = arreglo[arreglo.length - 1 - i];
+    }
+    return resultado;
+}`},
+{title:'Invertir y duplicar',desc:'Invierte el orden y multiplica cada elemento por dos.',name:'duplicarInvertido',tests:[[[1,2,3],[6,4,2]],[[5,10,15],[30,20,10]],[[-2,0,4],[8,0,-4]],[[],[]]],code:`public int[] duplicarInvertido(int[] arreglo) {
+    // Creamos el array resultado
+    int[] resultado = new int[arreglo.length];
+    for (int i = 0; i < arreglo.length; i++) {
+        // Leemos en orden inverso y multiplicamos por 2
+        resultado[i] = arreglo[arreglo.length - 1 - i] * 2;
+    }
+    return resultado;
+}`},
+{title:'Último número par',desc:'Busca desde el final. Si no encuentra un par, retorna -1.',name:'ultimoPar',tests:[[[2,4,6,7],6],[[8,3,5,9],8],[[1,3,5],-1],[[],-1]],code:`public int ultimoPar(int[] arreglo) {
+    // Recorremos desde el último índice
+    for (int i = arreglo.length - 1; i >= 0; i--) {
+        // Verificamos si el valor es par
+        if (arreglo[i] % 2 == 0) {
+            return arreglo[i];
+        }
+    }
+    return -1;
+}`},
+{title:'Invertir y duplicar solo los pares',desc:'Los impares conservan su valor, pero también cambian de posición.',name:'invertirDuplicarPares',tests:[[[1,2,3,4],[8,3,4,1]],[[2,5,8],[16,5,4]],[[1,3,5],[5,3,1]],[[],[]]],code:`public int[] invertirDuplicarPares(int[] arreglo) {
+    int[] resultado = new int[arreglo.length];
+    for (int i = 0; i < arreglo.length; i++) {
+        // Obtenemos el valor invertido
+        int valor = arreglo[arreglo.length - 1 - i];
+        if (valor % 2 == 0) {
+            valor = valor * 2;
+        }
+        // Guardamos tanto pares como impares
+        resultado[i] = valor;
+    }
+    return resultado;
+}`},
+{title:'Procesar temperaturas',desc:'Invierte el array y duplica las temperaturas mayores o iguales a 25. Este ejercicio no convierte a Fahrenheit.',name:'procesarTemperaturas',tests:[[[30,25,20,15,10],[10,15,20,50,60]],[[10,20,30],[60,20,10]],[[25,24],[24,50]],[[],[]]],code:`public int[] procesarTemperaturas(int[] temperaturas) {
+    int[] resultado = new int[temperaturas.length];
+    for (int i = 0; i < temperaturas.length; i++) {
+        // Leemos el valor en orden inverso
+        int valor = temperaturas[temperaturas.length - 1 - i];
+        if (valor >= 25) {
+            valor = valor * 2;
+        }
+        resultado[i] = valor;
+    }
+    return resultado;
+}`},
+{title:'Último divisible por 3 y 5',desc:'Busca desde el final un valor divisible por ambos números.',name:'buscarUltimoDivisible',tests:[[[15,20,30,7],30],[[45,12,10],45],[[3,5,8],-1],[[],-1]],code:`public int buscarUltimoDivisible(int[] arreglo) {
+    for (int i = arreglo.length - 1; i >= 0; i--) {
+        // Ambas condiciones deben cumplirse
+        if (arreglo[i] % 3 == 0 && arreglo[i] % 5 == 0) {
+            return arreglo[i];
+        }
+    }
+    return -1;
+}`},
+{title:'Invertir y eliminar los impares',desc:'Cuenta los pares para crear un array del tamaño exacto. Después lo llena en orden inverso.',name:'obtenerParesInvertidos',tests:[[[1,2,3,4,5,6],[6,4,2]],[[10,3,8,5],[8,10]],[[1,3,5],[]],[[2,4,6],[6,4,2]]],code:`public int[] obtenerParesInvertidos(int[] arreglo) {
+    int cantidad = 0;
+    // Primera fase: contar pares
+    for (int i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] % 2 == 0) {
+            cantidad++;
+        }
+    }
+    int[] resultado = new int[cantidad];
+    int posicion = 0;
+    // Segunda fase: recorrer desde el final
+    for (int i = arreglo.length - 1; i >= 0; i--) {
+        if (arreglo[i] % 2 == 0) {
+            resultado[posicion] = arreglo[i];
+            posicion++;
+        }
+    }
+    return resultado;
+}`},
+{title:'Verificar si un array es capicúa',desc:'Compara los extremos hasta la mitad del array.',name:'esCapicua',tests:[[[1,2,3,2,1],true],[[1,2,2,1],true],[[1,2,3],false],[[5],true],[[],true]],code:`public boolean esCapicua(int[] arreglo) {
+    // Comparamos únicamente hasta la mitad
+    for (int i = 0; i < arreglo.length / 2; i++) {
+        if (arreglo[i] != arreglo[arreglo.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}`}
+];
+const fmt=v=>Array.isArray(v)?'['+v.join(', ')+']':String(v);
+function simulate(k,a){const steps=[];let dest=null,filled=0;const add=(phase,msg,line,extra={})=>steps.push({phase,msg,line,dest:dest===null?null:[...dest],filled,...extra});const ret=(v,line,msg='Finalizamos el método y devolvemos el resultado.')=>add('Return',msg,line,{returned:v});const n=a.length;
+if([0,1,3,4].includes(k)){dest=Array(n).fill(0);add('Inicialización','Creamos resultado con '+n+' posiciones.',k<2?3:2);for(let i=0;i<n;i++){let j=n-1-i,v=a[j],out=v;const meta={i,j,v};add('Lectura inversa',`${n} - 1 - ${i} = ${j}; valor = ${v}`,k<2?6:5,meta);if(k===1)out=Math.imul(v,2);if(k===3||k===4){const ok=k===3?v%2===0:v>=25;add('Condición',`${k===3?v+' % 2 == 0':v+' >= 25'} → ${ok}`,6,{...meta,condition:ok});if(ok){out=Math.imul(v,2);add('Multiplicación',`${v} × 2 = ${out}`,7,{...meta,condition:ok,out});}}dest[i]=out;filled=i+1;add('Escritura',`resultado[${i}] = ${out}`,k<2?6:k===3?10:9,{...meta,out,write:i});}ret([...dest],E[k].code.split('\n').length-1);}
+else if(k===2||k===5){add('Inicialización','La búsqueda empieza desde el último índice.',k===2?3:2);for(let i=n-1;i>=0;i--){let v=a[i],ok=k===2?v%2===0:v%3===0&&v%5===0;add('Búsqueda',`${k===2?v+' % 2 == 0':v+' % 3 == 0 && '+v+' % 5 == 0'} → ${ok}`,k===2?5:4,{i,j:i,v,condition:ok});if(ok){ret(v,k===2?6:5,'Encontramos el valor: return termina la búsqueda inmediatamente.');return steps;}}ret(-1,E[k].code.split('\n').length-1,'No encontramos un valor válido.');}
+else if(k===6){let cantidad=0,posicion=0;add('Fase 1 · Contar pares','cantidad = 0; aún no existe resultado.',2,{cantidad});for(let i=0;i<n;i++){let v=a[i],ok=v%2===0;if(ok)cantidad++;add('Fase 1 · Contar pares',`${v} % 2 == 0 → ${ok}; cantidad = ${cantidad}`,ok?6:5,{i,j:i,v,cantidad,condition:ok});}dest=Array(cantidad).fill(0);add('Crear resultado',`new int[${cantidad}]; posicion = 0`,9,{cantidad,posicion});for(let i=n-1;i>=0;i--){let v=a[i],ok=v%2===0;add('Fase 2 · Filtrar en reversa',`${v} % 2 == 0 → ${ok}`,13,{i,j:i,v,cantidad,posicion,condition:ok});if(ok){let write=posicion;dest[posicion++]=v;filled=posicion;add('Fase 2 · Guardar',`resultado[${write}] = ${v}; posicion pasa a ${posicion}`,14,{i,j:i,v,cantidad,posicion,write});}}ret([...dest],18);}
+else {add('Inicialización','Comparamos hasta length / 2.',3);for(let i=0;i<Math.floor(n/2);i++){let j=n-1-i,ok=a[i]===a[j];add('Comparación',`${a[i]} != ${a[j]} → ${!ok}`,4,{i,j,v:a[i],other:a[j],condition:!ok,compare:true});if(!ok){ret(false,5,'Los extremos son diferentes.');return steps;}}ret(true,8,'Todas las parejas coinciden (o no hay parejas para comparar).');}return steps;}
+const $=id=>document.getElementById(id);let k=0,a=[],steps=[],p=0;
+function elem(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;}
+function arrayCells(el,arr,read=-1,compare=-1,filled=0,write=-1){el.replaceChildren();if(arr===null||arr.length===0){el.append(elem('span','muted',arr===null?'Aún no creado / no corresponde':'[ ] · Array vacío'));return;}arr.forEach((v,i)=>{const cell=elem('div','cell'+(i===read?' read':'')+(i===compare?' compare':'')+(i<filled?' written':'')+(i===write?' write':''));cell.append(elem('small','','['+i+']'),elem('strong','',v));el.append(cell);});}
+function syntax(line){const frag=document.createDocumentFragment(),re=/(\/\/.*|\b(?:public|int|boolean|new|for|if|return|true|false)\b|\b\d+\b)/g;let last=0;for(const m of line.matchAll(re)){frag.append(document.createTextNode(line.slice(last,m.index)));frag.append(elem('span',m[0].startsWith('//')?'comment':/^\d+$/.test(m[0])?'num':'kw',m[0]));last=m.index+m[0].length;}frag.append(document.createTextNode(line.slice(last)));return frag;}
+function render(){const s=steps[p],ex=E[k];$('phase').textContent=s.phase;$('step').textContent=`Paso ${p} / ${steps.length-1}`;$('progress').max=Math.max(1,steps.length-1);$('progress').value=p;arrayCells($('original'),a,s.compare?s.i:s.j,s.compare?s.j:-1);arrayCells($('dest'),s.dest,-1,-1,s.filled,s.write);$('destLabel').textContent=[2,5,7].includes(k)?'Búsqueda / comparación (sin array resultado)':'Array resultado';$('arrow').textContent=s.compare?`arreglo[${s.i}] ↔ arreglo[${s.j}]`:s.j!==undefined?s.write!==undefined?`original[${s.j}] → resultado[${s.write}]`:`Leyendo original[${s.j}]`:'—';$('metrics').replaceChildren();for(const [key,val] of [['i',s.i],['Índice inverso / lectura',s.j],['valor',s.v],['Condición',s.condition],['cantidad',s.cantidad],['posicion',s.posicion]]){if(val===undefined)continue;const m=elem('div','metric');m.append(elem('small','',key),elem('b','',fmt(val)));$('metrics').append(m);}$('explain').textContent=s.msg;$('output').textContent=s.returned===undefined?'Pendiente':fmt(s.returned);$('prev').disabled=p===0;$('next').disabled=p===steps.length-1;$('end').disabled=p===steps.length-1;$('code').replaceChildren();ex.code.split('\n').forEach((l,i)=>{const row=elem('span','line'+(i+1===s.line?' on':''));row.append(elem('span','ln',i+1),syntax(l));$('code').append(row);});$('trace').replaceChildren();steps.slice(0,p+1).forEach((t,i)=>{const tr=elem('tr',i===p?'on':'');tr.append(elem('td','',i),elem('td','',t.phase),elem('td','',t.msg));$('trace').append(tr);});}
+function start(arr){a=arr;steps=simulate(k,a);p=0;$('input').value=fmt(a);$('error').textContent='';render();}
+function select(k2){k=k2;$('tabs').querySelectorAll('button').forEach((b,i)=>b.classList.toggle('active',i===k));$('title').textContent=`Ejercicio ${k+1} — ${E[k].title}`;$('desc').textContent=E[k].desc;$('tests').replaceChildren();E[k].tests.forEach(([a,v],i)=>{const o=elem('option','',fmt(a)+' → '+fmt(v));o.value=i;$('tests').append(o);});start(E[k].tests[0][0]);}
+E.forEach((e,i)=>{const b=elem('button','',`${i+1}. ${e.title}`);b.onclick=()=>select(i);$('tabs').append(b);});$('apply').onclick=()=>{try{let t=$('input').value.trim();if(t.startsWith('[')&&t.endsWith(']'))t=t.slice(1,-1).trim();let arr=t===''?[]:t.split(',').map(x=>{x=x.trim();if(!/^[+-]?\d+$/.test(x)||Number(x)<-2147483648||Number(x)>2147483647)throw Error('Ingresá enteros válidos de Java (int), separados por comas.');return Number(x)|0;});if(arr.length>80)throw Error('Máximo 80 valores para mantener la visualización legible.');start(arr);}catch(e){$('error').textContent=e.message;}};$('load').onclick=()=>start(E[k].tests[Number($('tests').value)][0]);$('prev').onclick=()=>{if(p>0)p--;render();};$('next').onclick=()=>{if(p<steps.length-1)p++;render();};$('reset').onclick=()=>{p=0;render();};$('end').onclick=()=>{p=steps.length-1;render();};$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(E[k].code);$('copyStatus').textContent='Método copiado.';}catch{const ta=elem('textarea','');ta.value=E[k].code;document.body.append(ta);ta.select();try{$('copyStatus').textContent=document.execCommand('copy')?'Método copiado.':'Seleccioná y copiá el código manualmente.';}catch{$('copyStatus').textContent='Seleccioná y copiá el código manualmente.';}ta.remove();}};select(0);
+</script></body></html>
