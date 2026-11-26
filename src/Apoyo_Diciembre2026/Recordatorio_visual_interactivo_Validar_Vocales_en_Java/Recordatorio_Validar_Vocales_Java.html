@@ -1,0 +1,65 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Validar vocales | FEIP Java</title><style>
+:root{color-scheme:dark;--bg:#0f172a;--panel:#1e293b;--line:#334155;--text:#f1f5f9;--muted:#a7b6c9;--blue:#60a5fa;--green:#86efac;--red:#fda4af}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 'Segoe UI',system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:24px}header{margin-bottom:24px}h1{font-size:clamp(25px,4vw,35px);line-height:1.2;margin:10px 0}h2{font-size:21px;margin:0 0 12px}p{margin:8px 0}.eyebrow{color:var(--blue);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:700}.muted,small{color:var(--muted)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;margin:16px 0}button,input,select{font:inherit;border:1px solid #506079;border-radius:10px;padding:10px 14px;background:#111c2e;color:var(--text)}button{cursor:pointer}button:hover:not(:disabled){border-color:var(--blue);background:#294365}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:3px}button:disabled{opacity:.4;cursor:not-allowed}.primary{background:#2563eb;border-color:#60a5fa;font-weight:700}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.controls input[type=text]{flex:1;min-width:140px}.controls input[type=checkbox]{width:18px;height:18px;accent-color:#2563eb}.cases{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.cases button{font:14px system-ui;padding:8px 11px}.letters{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.tile{min-width:60px;flex:1;max-width:130px;text-align:center}.cell{background:#111c2e;border:1px solid #475569;border-radius:12px;font-size:36px;font-weight:700;min-height:78px;display:grid;place-items:center;margin:4px 0;overflow-wrap:anywhere}.current .cell{background:#2563eb;border-color:#93c5fd}.done .cell{background:#123c32;border-color:#22c55e}.bad .cell{background:#7f1d32;border-color:#fb7185}.current small{color:#93c5fd}.bad small{color:var(--red)}.done small{color:var(--green)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:15px 0}.metric{padding:14px;background:#111c2e;border-radius:12px}.metric strong{display:block;font-size:clamp(20px,4vw,36px);color:var(--blue);overflow-wrap:anywhere}.metric .yes,.yes{color:var(--green)}.metric .no,.no{color:var(--red)}.codebox,pre{background:#0b1223;border-radius:12px;padding:16px;overflow:auto;font:15px/1.65 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.comment{color:#86efac}.keyword{color:#c4b5fd}.string{color:#fcd34d}.number{color:#93c5fd}.nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:16px}.restart{display:block;margin:14px auto 0}.progress{height:5px;background:#334155;border-radius:5px;overflow:hidden;margin-top:18px}.progress div{height:100%;background:#60a5fa;transition:width .15s}.checks{display:flex;flex-wrap:wrap;gap:8px}.check{border:1px solid #475569;padding:8px 10px;border-radius:8px;font:13px Consolas,monospace}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;text-align:left;font-size:14px}th,td{padding:10px;border-bottom:1px solid #334155;white-space:nowrap}th{color:#a7b6c9}tr.active{background:#1e40af55}tr.future{opacity:.42}.codehead{display:flex;justify-content:space-between;gap:8px;align-items:center}.codehead h2{margin:0}pre{white-space:pre;margin-bottom:0}.line{display:block;padding:0 6px;border-left:3px solid transparent}.line.active{background:#1e40af55;border-color:#60a5fa}.ln{display:inline-block;color:#64748b;width:2.8em;user-select:none}.notice{border-left:3px solid #60a5fa;padding:8px 12px;margin:16px 0;color:#dbeafe}.result{font-weight:700}.copy-status{font-size:13px;color:var(--green)}footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}@media(max-width:550px){main{padding:12px}.panel{padding:15px}.tile{min-width:42px}.cell{font-size:27px;min-height:58px}.metrics{gap:6px}.metric{padding:8px}.nav button{padding:8px}.nav small{font-size:12px}}
+</style></head><body><main><header><div class="eyebrow">FEIP · Java · Strings y boolean</div><h1>¿Por qué el <code>return true</code> va fuera del <code>for</code>?</h1><p class="muted">Validar vocales · Recorrido visual letra por letra</p></header>
+<section class="panel"><h2>1. Elegí una palabra</h2><div class="controls"><label for="word">String palabra</label><input id="word" type="text" value="aeioX" autocomplete="off" spellcheck="false" maxlength="100"><label><input id="null" type="checkbox"> null</label><button class="primary" id="apply">Aplicar</button></div><div class="cases" id="cases"></div><p class="muted" id="validation"></p></section>
+<section class="panel"><h2>2. Recorrido interactivo</h2><p class="muted" id="example"></p><div class="letters" id="letters"></div><div class="metrics"><div class="metric"><small>Índice i</small><strong id="index">—</strong></div><div class="metric"><small>¿Es una vocal?</small><strong id="vocal">—</strong></div><div class="metric"><small>Retorno del método</small><strong id="ret">—</strong></div></div><div class="checks" id="checks"></div><div class="codebox" id="execution" aria-live="polite"></div><div class="progress"><div id="bar"></div></div><div class="nav"><button id="prev">← Anterior</button><small id="step"></small><button id="next" class="primary">Siguiente →</button></div><button id="restart" class="restart">↻ Reiniciar</button><div class="notice">Una letra inválida alcanza para retornar <code>false</code>. Para retornar <code>true</code> hay que comprobar todas las letras.</div></section>
+<section class="panel"><h2>3. Traza de escritorio</h2><div class="table-wrap"><table><thead><tr><th>i</th><th>letra</th><th>¿Es vocal?</th><th>Condición del if</th><th>Acción</th></tr></thead><tbody id="trace"></tbody></table></div></section>
+<section class="panel"><div class="codehead"><h2>4. Código Java — CodeRunner</h2><button id="copy">Copiar método</button></div><div id="copyStatus" class="copy-status" role="status"></div><pre id="source"></pre><p class="muted">Pegá solamente este método en CodeRunner, sin agregar una llave de cierre de clase ni un main.</p></section><footer>Apoyo Diciembre 2026 · Recordatorio visual de programación</footer></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const code=`public boolean validarVocal(String palabra) {
+
+    // Validamos la palabra y su longitud
+    if (palabra == null || palabra.length() < 3 || palabra.length() > 6) {
+        return false;
+    }
+
+    // Convertimos a minúsculas
+    palabra = palabra.toLowerCase();
+
+    // Recorremos todos los caracteres
+    for (int i = 0; i < palabra.length(); i++) {
+        char letra = palabra.charAt(i);
+
+        // Si la letra no es ninguna de las cinco vocales
+        if (letra != 'a' &&
+            letra != 'e' &&
+            letra != 'i' &&
+            letra != 'o' &&
+            letra != 'u') {
+            return false;
+        }
+    }
+
+    // Todas las letras fueron comprobadas
+    return true;
+}`;
+const quote=s=>s===null?'null':JSON.stringify(s);
+const isVowel=c=>['a','e','i','o','u'].includes(c);
+function simulate(value){
+ const states=[], rows=[];const lower=value===null?'':value.toLowerCase();const letters=lower.split('');
+ if(value===null||value.length<3||value.length>6){states.push({kind:'invalid',i:-1,ret:false,line:5,reason:value===null?'palabra == null es true. El operador || evita llamar a length().':`Longitud ${value.length}: debe estar entre 3 y 6.`});return {states,rows,letters,value,lower};}
+ states.push({kind:'validation',i:-1,line:4});states.push({kind:'lower',i:-1,line:9});
+ for(let i=0;i<letters.length;i++){
+  const c=letters[i],ok=isVowel(c);rows.push({i,c,ok});states.push({kind:'letter',i,c,ok,line:ok?12:20,ret:ok?undefined:false});if(!ok)return {states,rows,letters,value,lower};
+ }
+ states.push({kind:'return',i:letters.length,ret:true,line:25});return {states,rows,letters,value,lower};
+}
+let model=simulate('aeioX'),pos=2;
+const create=(tag,cls,text)=>{const e=document.createElement(tag);e.className=cls||'';e.textContent=text??'';return e;};
+function showCode(line){$('source').replaceChildren();code.split('\n').forEach((s,i)=>{const row=create('span','line'+(line===i+1?' active':''));row.append(create('span','ln',String(i+1)));const tokens=s.match(/\/\/.*$|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:public|boolean|if|return|false|true|null|for|int|char|String)\b|\b\d+\b|[^]+?/g)||[];for(const t of tokens){let c=t.startsWith('//')?'comment':/^['"]/.test(t)?'string':/^(public|boolean|if|return|false|true|null|for|int|char|String)$/.test(t)?'keyword':/^\d+$/.test(t)?'number':'';row.append(create('span',c,t));}$('source').append(row);});}
+function render(){const s=model.states[pos],total=model.states.length;const isLetter=s.kind==='letter';const valid=model.value!==null&&model.value.length>=3&&model.value.length<=6;
+ $('example').textContent='Ejemplo: palabra = '+quote(model.value)+(valid?' → '+quote(model.lower):'');$('validation').textContent=model.value===null?'Entrada aplicada: null':`Entrada aplicada: ${quote(model.value)} · longitud: ${model.value.length}`;
+ $('letters').replaceChildren();if(valid){model.letters.forEach((c,i)=>{const current=isLetter&&i===s.i;const checked=s.kind==='return'||isLetter&&i<s.i;const tile=create('div','tile'+(current?(s.ok?' current':' bad'):checked?' done':''));tile.append(create('small','',`[${i}]`),create('div','cell',c===' '?'␣':c),create('small','',current?(s.ok?'Vocal':'No vocal'):checked?'Vocal':'Pendiente'));$('letters').append(tile);});}else $('letters').append(create('p','muted','No se inicia el for: la validación inicial falla.'));
+ $('index').textContent=isLetter?s.i:s.kind==='return'?'Fin':'—';$('vocal').textContent=isLetter?String(s.ok):'—';$('vocal').className=isLetter?(s.ok?'yes':'no'):'';$('ret').textContent=s.ret===undefined?'Pendiente':String(s.ret);$('ret').className=s.ret===undefined?'':s.ret?'yes':'no';
+ $('checks').replaceChildren();if(isLetter){let skip=false;for(const v of 'aeiou'){const val=s.c!==v;const label=skip?'No evaluada':String(val);$('checks').append(create('span','check '+(skip?'muted':val?'yes':'no'),`letra != '${v}' → ${label}`));if(!val)skip=true;}}
+ const exec=$('execution');exec.replaceChildren();function ln(t,c=''){exec.append(create('div',c,t));}if(s.kind==='invalid'){ln('// Validación inicial','comment');ln(s.reason);ln('return false;','no');}else if(s.kind==='validation'){ln('// La palabra no es null y su longitud es válida','comment');ln(`longitud = ${model.value.length}`);ln('Continuamos con el método.');}else if(s.kind==='lower'){ln('// Convertimos a minúsculas','comment');ln(`palabra = ${quote(model.lower)};`);}else if(isLetter){ln('// Evaluamos la letra actual','comment');ln(`char letra = palabra.charAt(${s.i}); // ${quote(s.c)}`);ln(`Condición del if (no es vocal): ${!s.ok}`);ln(s.ok?'// Es vocal, continuamos recorriendo':'// No es vocal, terminamos el método','comment');if(!s.ok)ln('return false;','no');}else{ln('// Terminó el for sin encontrar ninguna letra inválida','comment');ln('return true;','yes');}
+ $('step').textContent=`Paso ${pos+1}/${total}`;$('bar').style.width=`${(pos+1)/total*100}%`;$('prev').disabled=pos===0;$('next').disabled=pos===total-1;
+ $('trace').replaceChildren();for(const r of model.rows){const reached=s.kind==='return'||isLetter&&r.i<=s.i;const tr=create('tr',isLetter&&r.i===s.i?'active':!reached?'future':'');for(const t of [r.i,quote(r.c),reached?String(r.ok):'—',reached?String(!r.ok):'—',!reached?'Pendiente':r.ok?'Continuar':'return false'])tr.append(create('td','',String(t)));$('trace').append(tr);}if(!model.rows.length){const tr=create('tr');const td=create('td','muted','No se ejecuta el for.');td.colSpan=5;tr.append(td);$('trace').append(tr);}showCode(s.line);
+}
+function apply(value,start=0){model=simulate(value);pos=Math.min(start,model.states.length-1);render();}
+$('apply').onclick=()=>apply($('null').checked?null:$('word').value);$('word').addEventListener('keydown',e=>{if(e.key==='Enter')$('apply').click();});$('null').onchange=()=>{$('word').disabled=$('null').checked;};$('prev').onclick=()=>{if(pos>0){pos--;render();}};$('next').onclick=()=>{if(pos<model.states.length-1){pos++;render();}};$('restart').onclick=()=>{pos=0;render();};
+for(const v of ['aeioX','AEIOU','aaa','ae','aeiouae','',null,'a e','áei']){const b=create('button','',quote(v));b.onclick=()=>{$('null').checked=v===null;$('word').disabled=v===null;$('word').value=v??'';apply(v);};$('cases').append(b);}
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(code);$('copyStatus').textContent='Método copiado.';}catch(e){const t=create('textarea');t.value=code;document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();$('copyStatus').textContent=ok?'Método copiado.':'Seleccioná el código y copialo manualmente.';}};render();
+</script></body></html>
