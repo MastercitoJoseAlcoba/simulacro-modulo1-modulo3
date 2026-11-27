@@ -1,0 +1,55 @@
+:root {
+  color-scheme: dark;
+  background: #0f172a;
+  color: #f8fafc;
+  font: 16px/1.55 'Segoe UI', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, footer { text-align: center; padding: 28px 16px; }
+header { background: #1e293b; border-bottom: 1px solid #334155; }
+footer { color: #cbd5e1; border-top: 1px solid #334155; }
+header p, article p { margin: 0; color: #cbd5e1; }
+h1 { margin: 0 0 6px; font-size: clamp(1.7rem, 5vw, 2.5rem); }
+h1, h3, a { color: #7dd3fc; }
+h2 { margin: 0 0 12px; font-size: 1.3rem; }
+h3 { margin: 20px 0 10px; font-size: 1.12rem; }
+h4 { margin: 0; font-size: 1.1rem; }
+main { max-width: 1120px; margin: auto; padding: 22px 16px 42px; }
+main > section { margin-top: 24px; }
+nav, .filtros { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+label { display: grid; gap: 4px; }
+.busqueda { flex: 1 1 240px; }
+input, select, button {
+  max-width: 100%;
+  min-height: 42px;
+  padding: 7px 11px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  background: #1e293b;
+  color: inherit;
+  font: inherit;
+}
+input { width: 100%; min-width: 0; }
+button { cursor: pointer; }
+button:hover { border-color: #7dd3fc; }
+button[aria-pressed="true"] { background: #123c51; border-color: #7dd3fc; color: #e0f2fe; }
+:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; }
+progress { display: block; width: min(100%, 360px); accent-color: #38bdf8; margin-top: 6px; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 12px; }
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  padding: 16px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+}
+article p { flex: 1; }
+article .detalle { flex: initial; font-size: .84rem; }
+article button { margin-top: 8px; background: #0f172a; }
+article button::before { content: '○ '; }
+article button[aria-pressed="true"]::before { content: '✓ '; }
+#estado { color: #cbd5e1; margin-bottom: 0; }
