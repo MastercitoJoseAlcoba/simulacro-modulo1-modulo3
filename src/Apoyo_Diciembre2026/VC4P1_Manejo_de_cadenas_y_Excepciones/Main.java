@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC4P1_Manejo_dec_adenas_y_Excepciones;
+package Apoyo_Diciembre2026.VC4P1_Manejo_de_cadenas_y_Excepciones;
 
 import java.util.Scanner;
 
