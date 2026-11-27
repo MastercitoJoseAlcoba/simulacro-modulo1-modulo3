@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC4_P1_ExepcionesYCadenas;
+package Apoyo_Diciembre2026.VC4P1_Manejo_dec_adenas_y_Excepciones;
 
 public class ControlAcceso {
 

@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC2P4_ArrayInvertido_UltimoElemento;
+package Apoyo_Diciembre2026.VC2P4_Array_Invertido_UltimoElemento;
 
 import java.util.Arrays;
 

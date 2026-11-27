@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC2P5_ArrayInvertido;
+package Apoyo_Diciembre2026.VC2P5_Array_Invertido;
 
 import java.util.Arrays;
 

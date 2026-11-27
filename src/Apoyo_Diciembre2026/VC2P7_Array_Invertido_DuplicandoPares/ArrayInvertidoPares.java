@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC2P7_ArrayInvertido_DuplicandoPares;
+package Apoyo_Diciembre2026.VC2P7_Array_Invertido_DuplicandoPares;
 
 import java.util.Arrays;
 
