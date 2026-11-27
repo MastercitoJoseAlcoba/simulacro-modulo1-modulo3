@@ -3,6 +3,7 @@
 const base = 'src/Apoyo_Diciembre2026/';
 const prefijoProgreso = 'feip:completado:';
 const completados = new Set();
+const claveDe = recurso => recurso.claveProgreso || recurso.archivo;
 const porId = id => document.getElementById(id);
 const buscar = porId('buscar');
 const navegacion = porId('modulos');
@@ -39,8 +40,8 @@ for (const recurso of recursos) {
     ...recurso.temas.flatMap(nombre => [nombre, sinonimos[nombre] || ''])
   ].join(' '));
   try {
-    if (localStorage.getItem(prefijoProgreso + recurso.archivo) === '1') {
-      completados.add(recurso.archivo);
+    if (localStorage.getItem(prefijoProgreso + claveDe(recurso)) === '1') {
+      completados.add(claveDe(recurso));
     }
   } catch {
     porId('aviso-progreso').hidden = false;
@@ -92,13 +93,13 @@ function crearTarjeta(recurso) {
   const boton = crear('button', 'Completado');
   boton.type = 'button';
   boton.setAttribute('aria-label', `Completado: ${recurso.nombre}`);
-  boton.setAttribute('aria-pressed', completados.has(recurso.archivo));
+  boton.setAttribute('aria-pressed', completados.has(claveDe(recurso)));
 
   boton.addEventListener('click', () => {
-    const clave = prefijoProgreso + recurso.archivo;
-    const completado = !completados.has(recurso.archivo);
-    if (completado) completados.add(recurso.archivo);
-    else completados.delete(recurso.archivo);
+    const clave = prefijoProgreso + claveDe(recurso);
+    const completado = !completados.has(claveDe(recurso));
+    if (completado) completados.add(claveDe(recurso));
+    else completados.delete(claveDe(recurso));
     try {
       if (completado) localStorage.setItem(clave, '1');
       else localStorage.removeItem(clave);
@@ -124,7 +125,7 @@ function render() {
     (!moduloActivo || recurso.modulo === moduloActivo) &&
     (!tema.value || recurso.temas.includes(tema.value)) &&
     (!tipo.value || recurso.tipo === tipo.value) &&
-    (!estadoProgreso.value || completados.has(recurso.archivo) === (estadoProgreso.value === 'completados')) &&
+    (!estadoProgreso.value || completados.has(claveDe(recurso)) === (estadoProgreso.value === 'completados')) &&
     terminos.every(termino => recurso.indice.some(palabra => palabra.includes(termino)))
   );
 
@@ -162,7 +163,7 @@ window.addEventListener('storage', evento => {
   else {
     if (!evento.key.startsWith(prefijoProgreso)) return;
     const archivo = evento.key.slice(prefijoProgreso.length);
-    if (!recursos.some(recurso => recurso.archivo === archivo)) return;
+    if (!recursos.some(recurso => claveDe(recurso) === archivo)) return;
     if (evento.newValue === '1') completados.add(archivo);
     else completados.delete(archivo);
   }
