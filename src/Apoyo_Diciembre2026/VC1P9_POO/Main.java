@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC1P6_POO_DM3;
+package Apoyo_Diciembre2026.VC1P9_POO;
 
 public class Main {
     public static void main(String[] args) {

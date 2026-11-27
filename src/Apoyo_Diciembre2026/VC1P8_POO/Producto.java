@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC1P5_POO_DM2;
+package Apoyo_Diciembre2026.VC1P8_POO;
 
 public class Producto {
 
