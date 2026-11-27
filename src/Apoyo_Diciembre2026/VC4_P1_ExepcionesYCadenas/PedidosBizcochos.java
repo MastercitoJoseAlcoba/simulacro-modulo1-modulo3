@@ -1,4 +1,4 @@
-package Apoyo_Diciembre2026.VC4_ExepcionesYCadenas;
+package Apoyo_Diciembre2026.VC4_P1_ExepcionesYCadenas;
 
 public class PedidosBizcochos {
    public String procesarPedido (String texto) {
